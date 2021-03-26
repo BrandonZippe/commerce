@@ -7,7 +7,7 @@ import useCustomer from '@framework/customer/use-customer'
 import { Avatar } from '@components/common'
 import { Heart, Bag } from '@components/icons'
 import { useUI } from '@components/ui/context'
-import DropdownMenu from './DropdownMenu'
+// import DropdownMenu from './DropdownMenu'
 import s from './UserNav.module.css'
 
 interface Props {
@@ -39,7 +39,7 @@ const UserNav: FC<Props> = ({ className }) => {
               </Link>
             </li>
           )}
-          <li className={s.item}>
+          {/* <li className={s.item}>
             {customer ? (
               <DropdownMenu />
             ) : (
@@ -51,7 +51,7 @@ const UserNav: FC<Props> = ({ className }) => {
                 <Avatar />
               </button>
             )}
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

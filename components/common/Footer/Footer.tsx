@@ -24,14 +24,14 @@ const Footer: FC<Props> = ({ className, pages }) => {
   return (
     <footer className={rootClassName}>
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accents-2 py-12 text-primary bg-primary transition-colors duration-150">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accents-2 py-12 text-primary transition-colors duration-150">
           <div className="col-span-1 lg:col-span-2">
             <Link href="/">
               <a className="flex flex-initial items-center font-bold md:mr-24">
                 <span className="rounded-full border border-gray-700 mr-2">
                   <Logo />
                 </span>
-                <span>ACME</span>
+                <span>512 Audio</span>
               </a>
             </Link>
           </div>
@@ -82,7 +82,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
               ))}
             </ul>
           </div>
-          <div className="col-span-1 lg:col-span-6 flex items-start lg:justify-end text-primary">
+          {/* <div className="col-span-1 lg:col-span-6 flex items-start lg:justify-end text-primary">
             <div className="flex space-x-6 items-center h-10">
               <a
                 aria-label="Github Repository"
@@ -93,13 +93,13 @@ const Footer: FC<Props> = ({ className, pages }) => {
               </a>
               <I18nWidget />
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="py-12 flex flex-col md:flex-row justify-between items-center space-y-4">
           <div>
-            <span>&copy; 2020 ACME, Inc. All rights reserved.</span>
+            <span>&copy; 2021 512 Audio, Inc. All rights reserved.</span>
           </div>
-          <div className="flex items-center text-primary">
+          {/* <div className="flex items-center text-primary">
             <span className="text-primary">Crafted by</span>
             <a
               rel="noopener"
@@ -113,7 +113,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
                 alt="Vercel.com Logo"
               />
             </a>
-          </div>
+          </div> */}
         </div>
       </Container>
     </footer>

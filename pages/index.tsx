@@ -1,5 +1,5 @@
 import { Layout } from '@components/common'
-import { Grid, Marquee, Hero } from '@components/ui'
+import { Grid, Marquee, Hero, Featured } from '@components/ui'
 import { ProductCard } from '@components/product'
 // import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
 import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
@@ -42,18 +42,13 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <Grid>
-        {products.slice(0, 3).map((product, i) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            imgProps={{
-              width: i === 0 ? 1080 : 540,
-              height: i === 0 ? 1080 : 540,
-            }}
-          />
-        ))}
-      </Grid>
+      <Featured
+        headline="Skylight"
+        description="
+      Studio Condenser Microphone."
+        image="https://cdn11.bigcommerce.com/s-ismvg5snnx/products/112/images/460/Westwood_Front_001__42325.1616793894.386.513.png?c=1&_ga=2.111673091.627434407.1616771570-248863279.1616771570"
+      />
+
       <Marquee variant="secondary">
         {products.slice(0, 3).map((product, i) => (
           <ProductCard
@@ -77,7 +72,19 @@ export default function Home({
         Hebrew. It’s now undergone a name change, and will be referred to as
         ‘Natural’."
       />
-      <Grid layout="B">
+      <Grid layout="C" variant="filled">
+        {products.slice(0, 5).map((product, i) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+            imgProps={{
+              width: i === 0 ? 1080 : 540,
+              height: i === 0 ? 1080 : 540,
+            }}
+          />
+        ))}
+      </Grid>
+      {/* <Grid layout="D">
         {products.slice(0, 3).map((product, i) => (
           <ProductCard
             key={product.id}
@@ -101,7 +108,7 @@ export default function Home({
             }}
           />
         ))}
-      </Marquee>
+      </Marquee> */}
       {/* <HomeAllProductsGrid
         newestProducts={products}
         categories={categories}
