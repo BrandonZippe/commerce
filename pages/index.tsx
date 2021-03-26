@@ -77,7 +77,7 @@ export default function Home({
         Hebrew. It’s now undergone a name change, and will be referred to as
         ‘Natural’."
       />
-      <Grid layout="C">
+      <Grid layout="B">
         {products.slice(0, 3).map((product, i) => (
           <ProductCard
             key={product.id}
