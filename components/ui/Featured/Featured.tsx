@@ -12,24 +12,24 @@ interface Props {
 
 const Featured: FC<Props> = ({ headline, description, image }) => {
   return (
-    <div className="bg-black">
+    <div className="bg-black wave-bg">
       <Container>
         <div className={s.root}>
-          <h2 className="text-4xl leading-10 font-extrabold text-white sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl">
+          <h2 className="text-4xl text-center leading-10 font-extrabold text-white sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl">
             {headline}
           </h2>
 
-          <img src={image} alt="*" />
+          <img className="center-max-500" src={image} alt="*" />
           <div className="flex flex-col justify-between">
-            <p className="mt-5 text-xl leading-7 text-accent-2 text-white">
+            <p className="mt-5 text-xl text-center leading-7 text-accent-2 text-white center-max-500">
               {description}
             </p>
-            <Link href="/blog">
+            {/* <Link href="/blog">
               <a className="text-white pt-3 font-bold hover:underline flex flex-row cursor-pointer w-max-content">
                 Read it here
                 <RightArrow width="20" heigh="20" className="ml-1" />
               </a>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </Container>

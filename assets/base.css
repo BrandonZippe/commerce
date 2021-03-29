@@ -108,6 +108,16 @@ a {
   animation-name: fadeIn;
 }
 
+.center-max-500 {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.wave-bg{
+  background: #000 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/waves.png?t=1617032208) no-repeat center center fixed;
+  background-size: contain;
+}
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;

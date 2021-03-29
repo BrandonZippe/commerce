@@ -43,10 +43,10 @@ export default function Home({
   return (
     <>
       <Featured
-        headline="Skylight"
+        headline="Limelight"
         description="
-      Studio Condenser Microphone."
-        image="https://cdn11.bigcommerce.com/s-ismvg5snnx/products/112/images/460/Westwood_Front_001__42325.1616793894.386.513.png?c=1&_ga=2.111673091.627434407.1616771570-248863279.1616771570"
+        Designed by engineers with a deep passion for audio, Limelight is easy to use, built like a tank, and ready to help you bring your voice to the world. Whether you’re Podcasting, Broadcasting, Streaming, Gaming or Recording, the new Limelight dynamic microphone is your key to studio quality sound – no engineering degree needed. So let's get started."
+        image="https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/skyfall-front-transp-bg-min.png?t=1617030197"
       />
 
       <Marquee variant="secondary">
@@ -72,7 +72,7 @@ export default function Home({
         Hebrew. It’s now undergone a name change, and will be referred to as
         ‘Natural’."
       />
-      <Grid layout="C" variant="filled">
+      {/* <Grid layout="C" variant="filled">
         {products.slice(0, 5).map((product, i) => (
           <ProductCard
             key={product.id}
@@ -83,7 +83,7 @@ export default function Home({
             }}
           />
         ))}
-      </Grid>
+      </Grid> */}
       {/* <Grid layout="D">
         {products.slice(0, 3).map((product, i) => (
           <ProductCard
