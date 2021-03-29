@@ -17,9 +17,9 @@ const Logo = ({ className = '', ...props }) => (
   //   />
   // </svg>
   <img
-    src="https://warmaudio.com/wp-content/uploads/2018/05/WA-BUG-500x500.png"
+    src="https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/wa-512-audio-logodelivery-002.png?t=1617033708&_ga=2.133605131.42426866.1617026311-248863279.1616771570"
     alt="logo"
-    width="32px"
+    width="46px"
     height="32px"
   />
 )

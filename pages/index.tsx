@@ -48,30 +48,25 @@ export default function Home({
         Designed by engineers with a deep passion for audio, Limelight is easy to use, built like a tank, and ready to help you bring your voice to the world. Whether you’re Podcasting, Broadcasting, Streaming, Gaming or Recording, the new Limelight dynamic microphone is your key to studio quality sound – no engineering degree needed. So let's get started."
         image="https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/skyfall-front-transp-bg-min.png?t=1617030197"
       />
+      <Hero
+        headline="Limelight: Studio Condenser Microphone"
+        description="
+        Limelight is a Dynamic Microphone with a Hypercardiod* pickup pattern – that means it will primarily “listen” to what it’s pointed at and will largely ignore sounds off to one side or the other. This is a great feature for Podcasters working in the same room with a co-host where each microphone should ideally only pick up one voice. In this case, we suggest placing the microphone 6 – 8 inches from the speaker, pointed as his or her mouth."
+      />
 
       <Marquee variant="secondary">
-        {products.slice(0, 3).map((product, i) => (
+        {products.slice(0, 5).map((product, i) => (
           <ProductCard
             key={product.id}
             product={product}
             variant="slim"
             imgProps={{
-              width: 320,
+              width: 240,
               height: 320,
             }}
           />
         ))}
       </Marquee>
-      <Hero
-        headline="Release Details: The Yeezy BOOST 350 V2 ‘Natural'"
-        description="
-        The Skyline BOOST 350 V2 lineup continues to grow. We recently had the
-        ‘Carbon’ iteration, and now release details have been locked in for
-        this ‘Natural’ joint. Revealed by Yeezy Mafia earlier this year, the
-        shoe was originally called ‘Abez’, which translated to ‘Tin’ in
-        Hebrew. It’s now undergone a name change, and will be referred to as
-        ‘Natural’."
-      />
       {/* <Grid layout="C" variant="filled">
         {products.slice(0, 5).map((product, i) => (
           <ProductCard

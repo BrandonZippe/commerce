@@ -13,7 +13,7 @@ interface Props {
 const Featured: FC<Props> = ({ headline, description, image }) => {
   return (
     <div className="bg-black wave-bg">
-      <Container>
+      <Container className="featured-hero">
         <div className={s.root}>
           <h2 className="text-4xl text-center leading-10 font-extrabold text-white sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl">
             {headline}

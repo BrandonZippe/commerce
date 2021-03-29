@@ -1,5 +1,5 @@
 {
-  "title": "ACME Storefront | Powered by Next.js Commerce",
+  "title": "512 Audio | Powered by Next.js Commerce",
   "titleTemplate": "%s - ACME Storefront",
   "description": "Next.js Commerce - https://www.nextjs.org/commerce",
   "openGraph": {
@@ -8,7 +8,7 @@
     "type": "website",
     "locale": "en_IE",
     "url": "https://nextjs.org/commerce",
-    "site_name": "Next.js Commerce",
+    "site_name": "512 Audio",
     "images": [
       {
         "url": "/card.png",

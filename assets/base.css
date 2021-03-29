@@ -6,8 +6,8 @@
   --selection: var(--cyan);
 
   --text-base: #000000;
-  --text-primary: #000000;
-  --text-secondary: white;
+  --text-primary: #FCFCFC;
+  --text-secondary: #695BD3;
 
   --hover: rgba(0, 0, 0, 0.075);
   --hover-1: rgba(0, 0, 0, 0.15);
@@ -111,12 +111,15 @@ a {
 .center-max-500 {
   max-width: 500px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .wave-bg{
   background: #000 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/waves.png?t=1617032208) no-repeat center center fixed;
-  background-size: contain;
+  background-size: cover;
 }
+
+.featured-hero {max-width: auto imp !important;}
 
 @-webkit-keyframes fadeIn {
   from {
