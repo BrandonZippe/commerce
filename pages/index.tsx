@@ -43,10 +43,10 @@ export default function Home({
   return (
     <>
       <Featured
-        headline="Limelight"
+        headline="u24"
         description="
         Designed by engineers with a deep passion for audio, Limelight is easy to use, built like a tank, and ready to help you bring your voice to the world. Whether you’re Podcasting, Broadcasting, Streaming, Gaming or Recording, the new Limelight dynamic microphone is your key to studio quality sound – no engineering degree needed. So let's get started."
-        image="https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/skyfall-front-transp-bg-min.png?t=1617030197"
+        image="https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/u24-front-002.png?t=1617633852&_ga=2.84699225.1746355319.1617630931-248863279.1616771570"
       />
       <Hero
         headline="Limelight: Studio Condenser Microphone"
@@ -55,7 +55,7 @@ export default function Home({
       />
 
       <Marquee variant="secondary">
-        {products.slice(0, 5).map((product, i) => (
+        {products.slice(0, 7).map((product, i) => (
           <ProductCard
             key={product.id}
             product={product}

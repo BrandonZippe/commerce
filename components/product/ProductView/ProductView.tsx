@@ -5,7 +5,7 @@ import { FC, useState } from 'react'
 import s from './ProductView.module.css'
 
 import { Swatch, ProductSlider } from '@components/product'
-import { Button, Container, Text, useUI } from '@components/ui'
+import { Button, Container, Text, useUI, Featured, Hero } from '@components/ui'
 
 import type { Product } from '@commerce/types'
 import usePrice from '@framework/product/use-price'
@@ -13,6 +13,7 @@ import { useAddItem } from '@framework/cart'
 
 import { getVariant, SelectedOptions } from '../helpers'
 import WishlistButton from '@components/wishlist/WishlistButton'
+import ProductCard from '../ProductCard/ProductCard'
 
 interface Props {
   className?: string
@@ -70,6 +71,14 @@ const ProductView: FC<Props> = ({ product }) => {
           ],
         }}
       />
+
+      <Featured
+        headline={product.name}
+        description={product.description}
+        image={product.images[0]?.url!}
+      />
+      <Hero headline={product.name} description={product.description} />
+
       <div className={cn(s.root, 'fit')}>
         <div className={cn(s.productDisplay, 'fit')}>
           <div className={s.nameBox}>
@@ -89,8 +98,8 @@ const ProductView: FC<Props> = ({ product }) => {
                     className={s.img}
                     src={image.url!}
                     alt={image.alt || 'Product Image'}
-                    width={1050}
-                    height={1050}
+                    width={500}
+                    height={500}
                     priority={i === 0}
                     quality="85"
                   />
