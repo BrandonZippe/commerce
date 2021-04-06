@@ -25,12 +25,12 @@ const Hero: FC<Props> = ({ headline, description }) => {
             <p className="mt-5 text-xl leading-7 text-primary">
               {content?.step_into}
             </p>
-            {/* <Link href="/blog">
+            <Link href="/blog">
               <a className="text-white pt-3 font-bold hover:underline flex flex-row cursor-pointer w-max-content">
                 Read it here
                 <RightArrow width="20" heigh="20" className="ml-1" />
               </a>
-            </Link> */}
+            </Link>
           </div>
         </div>
       </Container>
