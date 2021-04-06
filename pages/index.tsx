@@ -42,7 +42,19 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <Featured
+      <Grid layout="C" variant="filled">
+        {products.slice(0, 5).map((product, i) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+            imgProps={{
+              width: i === 0 ? 1080 : 540,
+              height: i === 0 ? 1080 : 540,
+            }}
+          />
+        ))}
+      </Grid>
+      {/* <Featured
         headline="u24"
         description="
         Designed by engineers with a deep passion for audio, Limelight is easy to use, built like a tank, and ready to help you bring your voice to the world. Whether you’re Podcasting, Broadcasting, Streaming, Gaming or Recording, the new Limelight dynamic microphone is your key to studio quality sound – no engineering degree needed. So let's get started."
@@ -52,7 +64,7 @@ export default function Home({
         headline="Limelight: Studio Condenser Microphone"
         description="
         Limelight is a Dynamic Microphone with a Hypercardiod* pickup pattern – that means it will primarily “listen” to what it’s pointed at and will largely ignore sounds off to one side or the other. This is a great feature for Podcasters working in the same room with a co-host where each microphone should ideally only pick up one voice. In this case, we suggest placing the microphone 6 – 8 inches from the speaker, pointed as his or her mouth."
-      />
+      /> */}
 
       <Marquee variant="secondary">
         {products.slice(0, 7).map((product, i) => (
@@ -67,18 +79,7 @@ export default function Home({
           />
         ))}
       </Marquee>
-      {/* <Grid layout="C" variant="filled">
-        {products.slice(0, 5).map((product, i) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            imgProps={{
-              width: i === 0 ? 1080 : 540,
-              height: i === 0 ? 1080 : 540,
-            }}
-          />
-        ))}
-      </Grid> */}
+
       {/* <Grid layout="D">
         {products.slice(0, 3).map((product, i) => (
           <ProductCard
