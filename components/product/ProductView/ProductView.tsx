@@ -14,6 +14,7 @@ import { useAddItem } from '@framework/cart'
 import { getVariant, SelectedOptions } from '../helpers'
 import WishlistButton from '@components/wishlist/WishlistButton'
 import ProductCard from '../ProductCard/ProductCard'
+import { productData } from '../../../content/product'
 
 interface Props {
   className?: string
@@ -52,15 +53,22 @@ const ProductView: FC<Props> = ({ product }) => {
     }
   }
 
+  // define custom fields array
+  const customFieldset = product.customFields.edges
+  //define content
+  let key = product.name
+  const content = productData.find((e) => e.product_name === key.toLowerCase())
+  console.log(product)
+
   return (
     <Container className="max-w-none w-full" clean>
       <NextSeo
         title={product.name}
-        description={product.description}
+        description={product.description.replace(/<[^>]+>/g, '')}
         openGraph={{
           type: 'website',
           title: product.name,
-          description: product.description,
+          description: product.description.replace(/<[^>]+>/g, ''),
           images: [
             {
               url: product.images[0]?.url!,
@@ -74,10 +82,13 @@ const ProductView: FC<Props> = ({ product }) => {
 
       <Featured
         headline={product.name}
-        description={product.description}
+        description={product.description.replace(/<[^>]+>/g, '')}
         image={product.images[0]?.url!}
       />
-      <Hero headline={product.name} description={product.description} />
+      <Hero
+        headline={product.name}
+        description={product.description.replace(/<[^>]+>/g, '')}
+      />
 
       <div className={cn(s.root, 'fit')}>
         <div className={cn(s.productDisplay, 'fit')}>
@@ -109,7 +120,7 @@ const ProductView: FC<Props> = ({ product }) => {
           </div>
         </div>
         <div className={s.sidebar}>
-          <section>
+          <section className="text-base">
             {product.options?.map((opt) => (
               <div className="pb-4" key={opt.displayName}>
                 <h2 className="uppercase font-medium">{opt.displayName}</h2>
@@ -142,10 +153,26 @@ const ProductView: FC<Props> = ({ product }) => {
             ))}
 
             <div className="pb-14 break-words w-full max-w-xl">
-              <Text html={product.description} />
+              <Text html={content?.step_into} />
+            </div>
+            <div className="pb-14 break-words w-full max-w-xl">
+              <h3 className="text-2xl uppercase leading-10 font-extrabold text-secondary w-full">
+                Technical Specifications
+              </h3>
+              {customFieldset?.map((fieldset: Array<string>, i: number) => (
+                <div
+                  className="flex flex-row justify-between content-center py-1"
+                  key={customFieldset[i].node.entityId}
+                >
+                  <span className="font-bold">
+                    {customFieldset[i].node.name}
+                  </span>
+                  <span>{customFieldset[i].node.value}</span>
+                </div>
+              ))}
             </div>
           </section>
-          <div>
+          <div className="pb-4">
             <Button
               aria-label="Add to Cart"
               type="button"

@@ -17,6 +17,15 @@ export const getProductQuery = /* GraphQL */ `
           __typename
           ... on Product {
             ...productInfo
+            customFields {
+              edges {
+                node {
+                  entityId
+                  name
+                  value
+                }
+              }
+            }
             variants {
               edges {
                 node {

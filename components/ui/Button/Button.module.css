@@ -3,7 +3,7 @@
 }
 
 .root:hover {
-  @apply bg-accents-0 text-primary border border-secondary;
+  @apply bg-accents-0 text-secondary border border-secondary;
 }
 
 .root:focus {
