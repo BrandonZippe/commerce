@@ -122,6 +122,11 @@ a {
 
 .featured-hero {max-width: auto imp !important;}
 
+.Limelight {
+  background: #695bd3 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/limelight-feature.png?t=1617830601&_ga=2.252513609.1746355319.1617630931-248863279.1616771570) right center no-repeat;
+  background-size: 600px;
+}
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;

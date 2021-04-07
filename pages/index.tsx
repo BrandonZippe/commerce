@@ -1,7 +1,7 @@
 import { Layout } from '@components/common'
 import { Grid, Marquee, Hero, Featured } from '@components/ui'
 import { ProductCard } from '@components/product'
-// import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
+import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
 import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 
 import { getConfig } from '@framework/api'
@@ -43,7 +43,7 @@ export default function Home({
   return (
     <>
       <Grid layout="C" variant="filled">
-        {products.slice(0, 5).map((product, i) => (
+        {products.slice(0, 6).map((product, i) => (
           <ProductCard
             key={product.id}
             product={product}
@@ -105,11 +105,6 @@ export default function Home({
           />
         ))}
       </Marquee> */}
-      {/* <HomeAllProductsGrid
-        newestProducts={products}
-        categories={categories}
-        brands={brands}
-      /> */}
     </>
   )
 }

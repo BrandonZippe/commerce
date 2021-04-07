@@ -27,12 +27,14 @@
   @apply absolute inset-0 bg-violet z-0 h-full;
 }
 
+
 .nameBox {
   @apply absolute top-6 left-0 z-20 pr-16;
 
   @screen lg {
     @apply left-6 pr-16;
   }
+  
 
   & .name {
     @apply px-6 py-2 bg-primary text-primary font-bold;
@@ -56,7 +58,7 @@
   @apply flex flex-col col-span-1 mx-auto max-w-8xl px-6 w-full h-full;
 
   @screen lg {
-    @apply col-span-6 py-24 justify-between;
+    @apply col-span-6 py-10 justify-between;
   }
 }
 

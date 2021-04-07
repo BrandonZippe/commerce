@@ -58,7 +58,6 @@ const ProductView: FC<Props> = ({ product }) => {
   //define content
   let key = product.name
   const content = productData.find((e) => e.product_name === key.toLowerCase())
-  console.log(product)
 
   return (
     <Container className="max-w-none w-full" clean>
@@ -79,12 +78,23 @@ const ProductView: FC<Props> = ({ product }) => {
           ],
         }}
       />
-
-      <Featured
-        headline={product.name}
-        description={product.description.replace(/<[^>]+>/g, '')}
-        image={product.images[0]?.url!}
-      />
+      <div className="bg-black wave-bg flex flex-col justify-center content-center pb-10">
+        <Featured
+          headline={product.name}
+          description={product.description.replace(/<[^>]+>/g, '')}
+          image={product.images[0]?.url!}
+        />
+        <Button
+          aria-label="Add to Cart"
+          type="button"
+          className="w-52 m-auto mb-8"
+          onClick={addToCart}
+          loading={loading}
+          disabled={!variant && product.options.length > 0}
+        >
+          Buy Now
+        </Button>
+      </div>
       <Hero
         headline={product.name}
         description={product.description.replace(/<[^>]+>/g, '')}
@@ -92,15 +102,6 @@ const ProductView: FC<Props> = ({ product }) => {
 
       <div className={cn(s.root, 'fit')}>
         <div className={cn(s.productDisplay, 'fit')}>
-          <div className={s.nameBox}>
-            <h1 className={s.name}>{product.name}</h1>
-            <div className={s.price}>
-              {price}
-              {` `}
-              {product.price?.currencyCode}
-            </div>
-          </div>
-
           <div className={s.sliderContainer}>
             <ProductSlider key={product.id}>
               {product.images.map((image, i) => (
@@ -153,21 +154,50 @@ const ProductView: FC<Props> = ({ product }) => {
             ))}
 
             <div className="pb-14 break-words w-full max-w-xl">
-              <Text html={content?.step_into} />
+              <div className="flex flex-row justify-between flex-wrap w-full mb-5">
+                <h1 className="text-secondary text-4xl uppercase font-extrabold">
+                  {product.name}
+                </h1>
+                <div className="bg-secondary text-primary font-bold inline-block tracking-wide p-3 text-1xl">
+                  {price}
+                  {` `}
+                  {product.price?.currencyCode}
+                </div>
+              </div>
+              <article>
+                <h3 className="font-bold text-sm">Features:</h3>
+                <Text
+                  html={
+                    '<p class="text-sm font-light pb-3">' +
+                    content?.product_feature +
+                    '</p>'
+                  }
+                />
+                <Text
+                  html={
+                    '<p class="text-sm font-light">' +
+                    content?.product_power +
+                    '</p>'
+                  }
+                />
+              </article>
             </div>
+
             <div className="pb-14 break-words w-full max-w-xl">
-              <h3 className="text-2xl uppercase leading-10 font-extrabold text-secondary w-full">
+              <h4 className="text-xl uppercase leading-10 font-extrabold text-secondary w-full">
                 Technical Specifications
-              </h3>
+              </h4>
               {customFieldset?.map((fieldset: Array<string>, i: number) => (
                 <div
                   className="flex flex-row justify-between content-center py-1"
                   key={customFieldset[i].node.entityId}
                 >
-                  <span className="font-bold">
+                  <span className="text-sm font-bold">
                     {customFieldset[i].node.name}
                   </span>
-                  <span>{customFieldset[i].node.value}</span>
+                  <span className="text-sm">
+                    {customFieldset[i].node.value}
+                  </span>
                 </div>
               ))}
             </div>
@@ -185,13 +215,13 @@ const ProductView: FC<Props> = ({ product }) => {
             </Button>
           </div>
         </div>
-        {process.env.COMMERCE_WISHLIST_ENABLED && (
+        {/* {process.env.COMMERCE_WISHLIST_ENABLED && (
           <WishlistButton
             className={s.wishlistButton}
             productId={product.id}
             variant={product.variants[0]! as any}
           />
-        )}
+        )} */}
       </div>
     </Container>
   )
