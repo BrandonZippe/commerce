@@ -85,7 +85,7 @@ const ProductSlider: FC = ({ children }) => {
                 ...child.props,
                 className: `${
                   child.props.className ? `${child.props.className} ` : ''
-                }keen-slider__slide`,
+                }keen-slider__slide w-full`,
               },
             }
           }
@@ -106,7 +106,7 @@ const ProductSlider: FC = ({ children }) => {
                   slider.moveToSlideRelative(idx)
                 }}
               >
-                <div className={s.dot} />
+                <div className={s.dot + " bg-secondary"} />
               </button>
             )
           })}
