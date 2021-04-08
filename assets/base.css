@@ -67,6 +67,14 @@
   box-sizing: inherit;
 }
 
+@font-face {
+  font-family: "EBGaramond";
+  src: url("/fonts/ideoma-liner/ideoma_LINER.otf");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
 html {
   height: 100%;
   box-sizing: border-box;
