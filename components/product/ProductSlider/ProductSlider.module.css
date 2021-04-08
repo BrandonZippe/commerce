@@ -58,7 +58,7 @@
 }
 
 .dot {
-  @apply bg-hover-1 transition w-3 h-3 rounded-full;
+  @apply bg-primary-2 transition w-3 h-3 rounded-full;
 }
 
 .positionIndicator:hover .dot {
@@ -74,7 +74,7 @@
 }
 
 .positionIndicatorActive .dot {
-  @apply bg-white;
+  @apply bg-secondary;
 }
 
 .positionIndicatorActive:hover .dot {

@@ -106,7 +106,7 @@ const ProductSlider: FC = ({ children }) => {
                   slider.moveToSlideRelative(idx)
                 }}
               >
-                <div className={s.dot + " bg-secondary"} />
+                <div className={s.dot} />
               </button>
             )
           })}

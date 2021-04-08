@@ -145,6 +145,8 @@ a {
   background-size: 600px;
 }
 
+.keen-slider__slide div {width: 100%;}
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
