@@ -31,7 +31,7 @@
   --accents-7: #495057;
   --accents-8: #343a40;
   --accents-9: #212529;
-  --font-sans: -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue',
+  --font-sans: "Neutra", -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue',
     'Helvetica', sans-serif;
 }
 
@@ -75,6 +75,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Neutra";
+  src: url("/fonts/neutra/neutra.otf");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
 html {
   height: 100%;
   box-sizing: border-box;
@@ -87,12 +95,13 @@ html {
 
 html,
 body {
-  font-family: var(--font-sans);
+  font-family: "Neutra", sans-serif, arial !important;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--primary);
   color: var(--text-base);
+  font-weight: 100;
 }
 
 body {
@@ -132,20 +141,34 @@ a {
 
 .Limelight {
   background: #695bd3 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/limelight-feature.png?t=1617830601&_ga=2.252513609.1746355319.1617630931-248863279.1616771570) right center no-repeat;
-  background-size: 600px;
+  background-size: 50%;
+  grid-column: span 6/ span 6;
 }
 
 .Spotlight {
   background: #695bd3 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/spotlight-feature.png?t=1617829952&_ga=2.146145524.1746355319.1617630931-248863279.1616771570) right center no-repeat;
-  background-size: 600px;
+  background-size: cover;
+  width: 100%;
+
 }
 
 .u24 {
-  background: #695bd3 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/u24-feature.png?t=1617830645&_ga=2.146145524.1746355319.1617630931-248863279.1616771570) right center no-repeat;
-  background-size: 600px;
+  background: #695bd3 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/u24-feature.png?t=1617830645&_ga=2.146145524.1746355319.1617630931-248863279.1616771570) right top no-repeat;
+  background-size: cover;
+  grid-column: span 6/ span 6;
 }
 
 .keen-slider__slide div {width: 100%;}
+
+.fancy {font-family: "Ideoma-Liner", sans-serif, arial;}
+.container-slim {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media (min-width: 768px) {
+  .Spotlight, .u24, .Limelight {width: 52%;}
+}
 
 @-webkit-keyframes fadeIn {
   from {

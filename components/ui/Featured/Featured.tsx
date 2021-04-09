@@ -15,7 +15,7 @@ const Featured: FC<Props> = ({ headline, description, image }) => {
   return (
     <Container className="featured-hero">
       <div className={s.root}>
-        <h2 className="text-4xl text-center leading-10 font-extrabold text-white sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl">
+        <h2 className="fancy text-4xl text-center leading-10 font-extrabold text-secondary sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl">
           {headline}
         </h2>
 

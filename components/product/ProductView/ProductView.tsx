@@ -87,12 +87,13 @@ const ProductView: FC<Props> = ({ product }) => {
         <Button
           aria-label="Add to Cart"
           type="button"
-          className="w-52 m-auto mb-8"
+          className="m-auto mb-8 flex-row justify-around align-center px-2"
           onClick={addToCart}
           loading={loading}
           disabled={!variant && product.options.length > 0}
         >
-          Buy Now
+          <span className="text-sm mr-2">Add to Cart</span>
+          <span className="text-sm ml-2">{price}</span>
         </Button>
       </div>
       <Hero
