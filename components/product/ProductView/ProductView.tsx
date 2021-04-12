@@ -15,6 +15,7 @@ import { getVariant, SelectedOptions } from '../helpers'
 import WishlistButton from '@components/wishlist/WishlistButton'
 import ProductCard from '../ProductCard/ProductCard'
 import { productData } from '../../../content/product'
+import ProductSection from '../ProductSection/ProductSection'
 
 interface Props {
   className?: string
@@ -202,7 +203,7 @@ const ProductView: FC<Props> = ({ product }) => {
               ))}
             </div>
           </section>
-          <div className="pb-4">
+          <div className="pb-4 flex flex-row justify-between max-w-xl">
             <Button
               aria-label="Add to Cart"
               type="button"
@@ -219,6 +220,11 @@ const ProductView: FC<Props> = ({ product }) => {
                 {product.price?.currencyCode}
               </span>
             </Button>
+            <div className="text-secondary font-bold inline-block tracking-wide py-3 text-2xl text-right">
+              {price}
+              {` `}
+              {product.price?.currencyCode}
+            </div>
           </div>
         </div>
         {/* {process.env.COMMERCE_WISHLIST_ENABLED && (
@@ -228,6 +234,48 @@ const ProductView: FC<Props> = ({ product }) => {
             variant={product.variants[0]! as any}
           />
         )} */}
+      </div>
+      <div className="bg-black relative grid items-start gap-8 grid-cols-1 md:grid-cols-2 overflow-x-hidden">
+        <div className="col-span-1 p-20 text-lg">
+          <article className="mb-4">
+            <h3 className="fancy text-3xl text-secondary">
+              {content?.header_check}
+            </h3>
+            <p className="text-primary">{content?.product_check}</p>
+          </article>
+          <article className="mb-4">
+            <h3 className="fancy text-3xl text-secondary">
+              {content?.header_gain}
+            </h3>
+            <p className="text-primary">{content?.product_gain}</p>
+          </article>
+          <article className="mb-4">
+            <h3 className="fancy text-3xl text-secondary">
+              {content?.header_pop}
+            </h3>
+            <p className="text-primary">{content?.product_pop}</p>
+          </article>
+          <article className="mb-4">
+            <h3 className="fancy text-3xl text-secondary">
+              {content?.header_location}
+            </h3>
+            <p className="text-primary">{content?.product_location}</p>
+          </article>
+          <article className="mb-4">
+            <h3 className="fancy text-3xl text-secondary">
+              {content?.header_pro_tip}
+            </h3>
+            <p className="text-primary">{content?.pro_tip}</p>
+          </article>
+        </div>
+        <div className="col-span-1">
+          <div className="w-full">
+            <img
+              src="https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/360-mic.gif?t=1618006150&_ga=2.84930137.1300180764.1618006098-2081447066.1617906337"
+              alt="*"
+            />
+          </div>
+        </div>
       </div>
     </Container>
   )
