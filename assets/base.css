@@ -1,26 +1,26 @@
 :root {
-  --primary: #515A7233;
-  --primary-2: #FCFCFC;
-  --secondary: #695BD3;
-  --secondary-2: #191919;
-  --selection: var(--cyan);
+  --primary: rgba(81, 90, 114, 1);
+  --primary-2: rgba(252, 252, 252, 1);
+  --secondary: rgba(105, 91, 211, 1);
+  --secondary-2: rgba(25, 25, 25, 1);
+  --selection: var(--secondary);
 
-  --text-base: #000000;
-  --text-primary: #FCFCFC;
-  --text-secondary: #695BD3;
-  --text-secondary-2: #515A7233;
+  --text-base: var(--secondary-2);
+  --text-primary: var(--primary-2);
+  --text-secondary: var(--secondary);
+  --text-secondary-2: var(--primary);
 
   --hover: rgba(0, 0, 0, 0.075);
   --hover-1: rgba(0, 0, 0, 0.15);
   --hover-2: rgba(0, 0, 0, 0.25);
-  --cyan: #22b8cf;
-  --green: #37b679;
-  --red: #da3c3c;
-  --pink: #e64980;
-  --purple: #f81ce5;
-  --blue: #0070f3;
-  --violet: #5f3dc4;
-  --violet-light: #7048e8;
+  --cyan: var(--primary);
+  --green: var(--primary-2);
+  --red: var(--secondary);
+  --pink: var(--secondary-2);
+  --purple: var(--primary);
+  --blue: var(--primary-2);
+  --violet: var(--secondary);
+  --violet-light: var(--secondary-2);
   --accents-0: #f8f9fa;
   --accents-1: #f1f3f5;
   --accents-2: #e9ecef;
