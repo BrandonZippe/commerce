@@ -19,7 +19,7 @@ const Hero: FC<Props> = ({ headline, description }) => {
     <div className="bg-secondary relative">
       <Container className="container-slim">
         <div className={s.root}>
-          <div className="p-4 w-full md:w-2/4 md:p-20">
+          <div className="p-4 w-full md:w-2/4 md:p-40">
             <h2 className="fancy text-3xl uppercase leading-10 font-extrabold text-primary sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl">
               {content?.header_intro}
             </h2>

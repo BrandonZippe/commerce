@@ -158,6 +158,11 @@ a {
   width: 100%;  
 }
 
+.Spotlight_360 {
+  background: #000 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/360-mic.gif?t=1618006150&_ga=2.84930137.1300180764.1618006098-2081447066.1617906337) center center no-repeat fixed;
+  background-size: contain;
+}
+
 .keen-slider__slide div {width: 100%;}
 
 .fancy {font-family: "Ideoma-Liner", sans-serif, arial;}
@@ -166,8 +171,65 @@ a {
   padding-right: 0 !important;
 }
 
+.content-wrap {
+  border: solid 1px var(--primary-2);
+  padding: 1em;
+  border-radius: 1rem;
+  max-width: 450px;
+  background: var(--black);
+  z-index: 1;
+
+}
+.pointer-wrap {
+  width: 100%;
+  position: absolute;
+}
+
+.line {    
+  height: 1px;
+  background-color: var(--primary-2);
+}
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: var(--primary);
+  position: absolute;
+  top: -10px;
+  border: solid 2px var(--primary-2);
+}
+
+.indicator-right .pointer-wrap {
+  right: -100px;
+}
+
+.indicator-left .pointer-wrap {
+  left: -100px;
+}
+
+.indicator-right .dot {
+  right: 0;
+}
+
+.indicator-left .dot {
+  left: 0;
+}
+
+.middle .pointer-wrap {
+  top: 50%;
+}
+
+.top .pointer-wrap {
+  top: 50px;
+}
+
+.bottom .pointer-wrap {
+  bottom: 100px;
+}
+
+
 @media (min-width: 768px) {
-  .Spotlight, .u24, .Limelight {width: 52.9%;}
+  .Spotlight, .u24, .Limelight {width: 50%;}
 }
 
 @-webkit-keyframes fadeIn {

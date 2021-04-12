@@ -1,15 +1,22 @@
 import React, { FC } from 'react'
-import { productData } from '../../../content/product'
+import IndicatorLine from '../../icons/IndicatorLine'
+
 interface Props {
-  headline: string
-  description: string
+  className?: string
+  headline?: string
+  copy?: string
 }
 
-const ProductSection: FC<Props> = ({ headline, description }) => {
+const ProductSection: FC<Props> = ({ headline, copy, className }) => {
   return (
-    <article className="p-10">
-      <h3 className="fancy text-3xl text-secondary-2">{headline}</h3>
-      <p className="">{description}</p>
+    <article
+      className={className + ' flex justify-start relative p-4 xl:my-20'}
+    >
+      <div className="content-wrap">
+        <h3 className="fancy text-3xl text-secondary">{headline}</h3>
+        <p className="text-primary">{copy}</p>
+      </div>
+      <IndicatorLine />
     </article>
   )
 }

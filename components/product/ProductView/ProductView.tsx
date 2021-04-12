@@ -101,11 +101,45 @@ const ProductView: FC<Props> = ({ product }) => {
           </span>
         </Button>
       </div>
-      <Hero
-        headline={product.name}
-        description={product.description.replace(/<[^>]+>/g, '')}
-      />
+      <Hero headline={product.name} description={product.description} />
+      <div
+        className={
+          product.name +
+          '_360' +
+          ' bg-black relative grid items-start gap-96 xl:gap-80 grid-cols-1 xl:grid-cols-2 overflow-x-hidden py-20'
+        }
+      >
+        <div className="col-span-1 xl:p-20 text-lg indicator-right">
+          <ProductSection
+            className="flex-row xl:ml-20 bottom"
+            headline={content?.header_check}
+            copy={content?.product_check}
+          />
+          <ProductSection
+            className="flex-row middle"
+            headline={content?.header_gain}
+            copy={content?.product_gain}
+          />
+        </div>
 
+        <div className="col-span-1 xl:p-20 text-lg indicator-left">
+          <ProductSection
+            className="flex-row-reverse middle"
+            headline={content?.header_pop}
+            copy={content?.product_pop}
+          />
+          <ProductSection
+            className="flex-row-reverse top"
+            headline={content?.header_location}
+            copy={content?.product_location}
+          />
+          <ProductSection
+            className="flex-row-reverse xl:mr-40 bottom"
+            headline={content?.header_pro_tip}
+            copy={content?.pro_tip}
+          />
+        </div>
+      </div>
       <div className={cn(s.root, 'fit')}>
         <div className={cn(s.productDisplay, 'fit')}>
           <div className={s.sliderContainer}>
@@ -229,48 +263,6 @@ const ProductView: FC<Props> = ({ product }) => {
             variant={product.variants[0]! as any}
           />
         )} */}
-      </div>
-      <div className="bg-black relative grid items-start gap-8 grid-cols-1 md:grid-cols-2 overflow-x-hidden">
-        <div className="col-span-1 p-20 text-lg">
-          <article className="mb-4">
-            <h3 className="fancy text-3xl text-secondary">
-              {content?.header_check}
-            </h3>
-            <p className="text-primary">{content?.product_check}</p>
-          </article>
-          <article className="mb-4">
-            <h3 className="fancy text-3xl text-secondary">
-              {content?.header_gain}
-            </h3>
-            <p className="text-primary">{content?.product_gain}</p>
-          </article>
-          <article className="mb-4">
-            <h3 className="fancy text-3xl text-secondary">
-              {content?.header_pop}
-            </h3>
-            <p className="text-primary">{content?.product_pop}</p>
-          </article>
-          <article className="mb-4">
-            <h3 className="fancy text-3xl text-secondary">
-              {content?.header_location}
-            </h3>
-            <p className="text-primary">{content?.product_location}</p>
-          </article>
-          <article className="mb-4">
-            <h3 className="fancy text-3xl text-secondary">
-              {content?.header_pro_tip}
-            </h3>
-            <p className="text-primary">{content?.pro_tip}</p>
-          </article>
-        </div>
-        <div className="col-span-1">
-          <div className="w-full">
-            <img
-              src="https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/360-mic.gif?t=1618006150&_ga=2.84930137.1300180764.1618006098-2081447066.1617906337"
-              alt="*"
-            />
-          </div>
-        </div>
       </div>
     </Container>
   )
