@@ -95,6 +95,8 @@ const ProductView: FC<Props> = ({ product }) => {
           <span className="text-sm p-6">Add to Cart</span>
           <span className="text-sm p-6 bg-primary-2 text-secondary">
             {price}
+            {` `}
+            {product.price?.currencyCode}
           </span>
         </Button>
       </div>
