@@ -31,13 +31,12 @@ const Footer: FC<Props> = ({ className, pages }) => {
                 <span className="rounded-full border border-gray-700 mr-2">
                   <Logo />
                 </span>
-                <span>512 Audio</span>
               </a>
             </Link>
           </div>
           <div className="col-span-1 lg:col-span-2">
             <ul className="flex flex-initial flex-col md:flex-1">
-              <li className="py-3 md:py-0 md:pb-4">
+              {/* <li className="py-3 md:py-0 md:pb-4">
                 <Link href="/">
                   <a className="text-primary hover:text-accents-6 transition ease-in-out duration-150">
                     Home
@@ -50,11 +49,11 @@ const Footer: FC<Props> = ({ className, pages }) => {
                     Careers
                   </a>
                 </Link>
-              </li>
+              </li> */}
               <li className="py-3 md:py-0 md:pb-4">
                 <Link href="/blog">
                   <a className="text-primary hover:text-accents-6 transition ease-in-out duration-150">
-                    Blog
+                    Media
                   </a>
                 </Link>
               </li>

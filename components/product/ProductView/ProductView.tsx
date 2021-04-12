@@ -220,11 +220,6 @@ const ProductView: FC<Props> = ({ product }) => {
                 {product.price?.currencyCode}
               </span>
             </Button>
-            <div className="text-secondary font-bold inline-block tracking-wide py-3 text-2xl text-right">
-              {price}
-              {` `}
-              {product.price?.currencyCode}
-            </div>
           </div>
         </div>
         {/* {process.env.COMMERCE_WISHLIST_ENABLED && (
