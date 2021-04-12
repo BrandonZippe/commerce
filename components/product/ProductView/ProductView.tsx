@@ -87,13 +87,15 @@ const ProductView: FC<Props> = ({ product }) => {
         <Button
           aria-label="Add to Cart"
           type="button"
-          className="m-auto mb-8 flex-row justify-around align-center px-2"
+          className="m-auto mb-8 flex flex-row justify-between align-center px-0"
           onClick={addToCart}
           loading={loading}
           disabled={!variant && product.options.length > 0}
         >
-          <span className="text-sm mr-2">Add to Cart</span>
-          <span className="text-sm ml-2">{price}</span>
+          <span className="text-sm p-6">Add to Cart</span>
+          <span className="text-sm p-6 bg-primary-2 text-secondary">
+            {price}
+          </span>
         </Button>
       </div>
       <Hero
@@ -159,11 +161,6 @@ const ProductView: FC<Props> = ({ product }) => {
                 <h1 className="text-secondary text-4xl uppercase font-extrabold">
                   {product.name}
                 </h1>
-                <div className="bg-secondary text-primary font-bold inline-block tracking-wide p-3 text-1xl">
-                  {price}
-                  {` `}
-                  {product.price?.currencyCode}
-                </div>
               </div>
               <article>
                 <h3 className="font-bold text-sm">Features:</h3>
@@ -207,12 +204,18 @@ const ProductView: FC<Props> = ({ product }) => {
             <Button
               aria-label="Add to Cart"
               type="button"
-              className={s.button}
+              className="m-auto mb-8 flex flex-row justify-between align-center px-0"
               onClick={addToCart}
               loading={loading}
               disabled={!variant && product.options.length > 0}
             >
-              Add to Cart
+              <span className="text-sm p-6">Add to Cart</span>
+
+              <span className="text-sm p-6 bg-primary-2 text-secondary">
+                {price}
+                {` `}
+                {product.price?.currencyCode}
+              </span>
             </Button>
           </div>
         </div>
