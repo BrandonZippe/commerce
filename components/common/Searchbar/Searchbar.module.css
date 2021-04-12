@@ -1,6 +1,6 @@
 .input {
   @apply bg-primary px-3 py-2 appearance-none w-full transition duration-150 ease-in-out pr-10;
-
+  height: 46px;
   @screen sm {
     min-width: 300px;
   }
