@@ -21,6 +21,7 @@
   --blue: var(--primary-2);
   --violet: var(--secondary);
   --violet-light: var(--secondary-2);
+  --black: rgba(0, 0, 0, 1);
   --accents-0: #f8f9fa;
   --accents-1: #f1f3f5;
   --accents-2: #e9ecef;
