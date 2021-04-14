@@ -15,7 +15,7 @@ const Navbar: FC = () => (
               <Logo />
             </a>
           </Link>
-          <nav className="mx-6 space-x-4 lg:block flex-wrap">
+          <nav className="mx-6 space-x-2.5 md:space-x-4 lg:block flex-wrap">
             <Link href="/about">
               <a className={s.link}>About</a>
             </Link>
