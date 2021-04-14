@@ -11,7 +11,7 @@ interface Props {
 const ProductSection: FC<Props> = ({ headline, copy, className }) => {
   return (
     <Controller>
-      <Scene triggerHook="onLeave" duration={1000} pin>
+      <Scene duration={900} pin>
         <article
           className={className + ' flex justify-start relative p-4 xl:my-20'}
         >
