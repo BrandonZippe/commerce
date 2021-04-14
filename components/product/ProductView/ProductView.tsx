@@ -109,7 +109,7 @@ const ProductView: FC<Props> = ({ product }) => {
           ' bg-black relative grid items-start gap-96 xl:gap-80 grid-cols-1 xl:grid-cols-2 overflow-x-hidden py-20'
         }
       >
-        <div className="col-span-1 md:p-0 xl:p-20 text-lg indicator-right">
+        <div className="col-span-1 xl:p-20 text-lg indicator-right">
           <ProductSection
             className="flex-row xl:ml-20 bottom"
             headline={content?.header_check}
@@ -122,7 +122,7 @@ const ProductView: FC<Props> = ({ product }) => {
           />
         </div>
 
-        <div className="col-span-1 md:p-0 xl:p-20 text-lg indicator-left">
+        <div className="col-span-1 xl:p-20 text-lg indicator-left">
           <ProductSection
             className="flex-row-reverse middle"
             headline={content?.header_pop}
