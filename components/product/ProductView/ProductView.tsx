@@ -16,6 +16,8 @@ import WishlistButton from '@components/wishlist/WishlistButton'
 import ProductCard from '../ProductCard/ProductCard'
 import { productData } from '../../../content/product'
 import ProductSection from '../ProductSection/ProductSection'
+import { Controller, Scene } from 'react-scrollmagic'
+import Sequence from '../Sequence'
 
 interface Props {
   className?: string
@@ -102,6 +104,19 @@ const ProductView: FC<Props> = ({ product }) => {
         </Button>
       </div>
       <Hero headline={product.name} description={product.description} />
+
+      <div>
+        <Controller>
+          <Scene duration="200%" triggerHook="onLeave" pin>
+            {(progress) => (
+              <div style={{ height: '100vh', position: 'relative' }}>
+                <Sequence ref={ref} progress={progress} />
+              </div>
+            )}
+          </Scene>
+        </Controller>
+      </div>
+
       <div
         className={
           product.name +
