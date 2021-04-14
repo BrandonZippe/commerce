@@ -50,6 +50,29 @@ module.exports = {
         primary: 'var(--text-primary)',
         secondary: 'var(--text-secondary)',
       },
+      fontSize: {
+        title: [
+          '24px',
+          {
+            letterSpacing: '-0.01em',
+            lineHeight: '1.5',
+          },
+        ],
+        subTitle: [
+          '24px',
+          {
+            letterSpacing: '-0.01em',
+            lineHeight: '1.5',
+          },
+        ],
+        body: [
+          '24px',
+          {
+            letterSpacing: '-0.01em',
+            lineHeight: '1.5',
+          },
+        ],
+      },
       boxShadow: {
         'outline-normal': '0 0 0 2px var(--accents-2)',
         magical:
