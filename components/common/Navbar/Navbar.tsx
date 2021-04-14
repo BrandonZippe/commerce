@@ -31,12 +31,13 @@ const Navbar: FC = () => (
           </nav>
         </div>
 
-        <div className="justify-center hidden lg:flex">
-          <Searchbar />
-        </div>
-
         <div className="flex justify-end space-x-8">
-          <UserNav />
+          <div className="hidden lg:flex">
+            <Searchbar />
+          </div>
+          <div className="flex flex-col justify-center align-center">
+            <UserNav />
+          </div>
         </div>
       </div>
 
