@@ -132,7 +132,7 @@ const ProductView: FC<Props> = ({ product }) => {
                 className="flex-row xl:ml-20 bottom"
                 headline={content?.header_check}
                 copy={content?.product_check}
-                time={600}
+                time={200}
               />
               <ProductSection
                 className="flex-row middle"
@@ -147,19 +147,19 @@ const ProductView: FC<Props> = ({ product }) => {
                 className="flex-row-reverse middle"
                 headline={content?.header_pop}
                 copy={content?.product_pop}
-                time={1200}
+                time={400}
               />
               <ProductSection
                 className="flex-row-reverse top"
                 headline={content?.header_location}
                 copy={content?.product_location}
-                time={1600}
+                time={600}
               />
               <ProductSection
                 className="flex-row-reverse xl:mr-40 bottom"
                 headline={content?.header_pro_tip}
                 copy={content?.pro_tip}
-                time={2000}
+                time={800}
               />
             </div>
           </div>

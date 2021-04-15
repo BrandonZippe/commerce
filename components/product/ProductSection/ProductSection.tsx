@@ -1,16 +1,17 @@
 import React, { FC } from 'react'
 import IndicatorLine from '../../icons/IndicatorLine'
-import { Controller, Scene } from 'react-scrollmagic'
+import { Scene } from 'react-scrollmagic'
 
 interface Props {
   className?: string
   headline?: string
   copy?: string
+  time?: number
 }
 
-const ProductSection: FC<Props> = ({ headline, copy, className }) => {
+const ProductSection: FC<Props> = ({ headline, copy, className, time }) => {
   return (
-    <Scene duration={600} pin>
+    <Scene duration={time} pin>
       <article
         className={className + ' flex justify-start relative p-4 xl:my-20'}
       >
