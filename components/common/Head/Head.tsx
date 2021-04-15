@@ -10,7 +10,18 @@ const Head: FC = () => {
       <NextHead>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/site.webmanifest" key="site-manifest" />
-        <link rel="preload" href="/fonts/ideoma-liner/ideoma_LINER.otf" as="font" crossOrigin="" />
+        <link
+          rel="preload"
+          href="/fonts/futura/futura_light.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/futura/futura_bold.ttf"
+          as="font"
+          crossOrigin=""
+        />
       </NextHead>
     </>
   )
