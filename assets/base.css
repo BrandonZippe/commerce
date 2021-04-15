@@ -85,7 +85,7 @@
   src: url("/fonts/futura/futura_bold.ttf");
   font-style: normal;
   font-weight: normal;
-  font-display: fallback;
+  font-display: auto;
 }
 
 @font-face {
@@ -113,7 +113,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--primary);
-  color: transparent;
+  color: var(--primary);
   font-weight: normal;
   font-size: 1rem;
 }
@@ -229,7 +229,7 @@ a {
 
 .line {    
   height: 1px;
-  background-color: var(--primary-2);
+  background-color: var(--primary);
 }
 .dot {
   width: 20px;
@@ -269,6 +269,8 @@ a {
   bottom: 100px;
 }
 
+.indicatorOn {opacity: 1;transition: all linear .3s;}
+
 .gradient {
   background: linear-gradient(
     180deg
@@ -276,6 +278,48 @@ a {
         float: left;
         width: 100%;
         padding: 10em;
+}
+
+.stickyHeader {
+  background: linear-gradient(to top, #000000 50%, #ffffff 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 999;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    top: 21px;
+}
+
+.skeleton {
+  background-color: rgba(240, 240, 240, 1);
+  background-image: linear-gradient(
+    90deg,
+    rgba(240, 240, 240, 1),
+    rgba(240, 240, 240, 1),
+    rgba(255, 255, 255, 1),
+    rgba(240, 240, 240, 1),
+    rgba(240, 240, 240, 1)
+  );
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+  display: inline-block;
+  line-height: 1;
+  width: 100%;
+  animation: skeleton 500ms ease-in-out infinite;
+
+  @keyframes skeleton {
+    0% {
+      background-position: -200px 0;
+    }
+    100% {
+      background-position: calc(200px + 100%) 0;
+    }
+  }
 }
 
 @media (min-width: 768px) {

@@ -1,7 +1,7 @@
 {
-  "name": "Next.js Commerce",
-  "short_name": "Next.js Commerce",
-  "description": "Next.js Commerce -> https://www.nextjs.org/commerce",
+  "name": "512 Audio",
+  "short_name": "512 Audio",
+  "description": "512 Audio",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#fff",

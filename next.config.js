@@ -3,6 +3,9 @@ const withCommerceConfig = require('./framework/commerce/with-config')
 
 const isBC = commerce.provider === 'bigcommerce'
 const isShopify = commerce.provider === 'shopify'
+const path = require('path')
+const isProd = process.env.NODE_ENV === 'production'
+const withImages = require('next-images')
 
 module.exports = withCommerceConfig({
   commerce,
@@ -39,3 +42,17 @@ module.exports = withCommerceConfig({
     ].filter((x) => x)
   },
 })
+
+module.exports = withImages({
+  assetPrefix: isProd ? 'https://zippecodes.site' : 'http://localhost:3000',
+  dynamicAssetPrefix: true,
+  webpack(config, options) {
+    return config
+  },
+})
+
+module.exports = {
+  images: {
+    domains: ['cdn11.bigcommerce.com'],
+  },
+}

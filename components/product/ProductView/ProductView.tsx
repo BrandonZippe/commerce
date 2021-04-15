@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { NextSeo } from 'next-seo'
 import { FC, useState } from 'react'
 import s from './ProductView.module.css'
-
+import React, { useRef } from 'react'
 import { Swatch, ProductSlider } from '@components/product'
 import { Button, Container, Text, useUI, Featured, Hero } from '@components/ui'
 
@@ -16,6 +16,8 @@ import WishlistButton from '@components/wishlist/WishlistButton'
 import ProductCard from '../ProductCard/ProductCard'
 import { productData } from '../../../content/product'
 import ProductSection from '../ProductSection/ProductSection'
+import { Controller, Scene } from 'react-scrollmagic'
+import Sequence from '../Sequence'
 
 interface Props {
   className?: string
@@ -59,6 +61,7 @@ const ProductView: FC<Props> = ({ product }) => {
   //define content
   let key = product.name
   const content = productData.find((e) => e.product_name === key.toLowerCase())
+  const ref = useRef()
 
   return (
     <Container className="max-w-none w-full" clean>
@@ -104,44 +107,65 @@ const ProductView: FC<Props> = ({ product }) => {
         {/* <div className="gradient"></div> */}
       </div>
       <Hero headline={product.name} description={product.description} />
-      <div
-        className={
-          product.name +
-          '_360' +
-          ' bg-primary-2 relative grid items-start gap-96 xl:gap-80 grid-cols-1 xl:grid-cols-2 overflow-x-hidden py-20'
-        }
-      >
-        <div className="col-span-1 xl:p-20 text-lg indicator-right">
-          <ProductSection
-            className="flex-row xl:ml-20 bottom"
-            headline={content?.header_check}
-            copy={content?.product_check}
-          />
-          <ProductSection
-            className="flex-row middle"
-            headline={content?.header_gain}
-            copy={content?.product_gain}
-          />
-        </div>
 
-        <div className="col-span-1 xl:p-20 text-lg indicator-left">
-          <ProductSection
-            className="flex-row-reverse middle"
-            headline={content?.header_pop}
-            copy={content?.product_pop}
-          />
-          <ProductSection
-            className="flex-row-reverse top"
-            headline={content?.header_location}
-            copy={content?.product_location}
-          />
-          <ProductSection
-            className="flex-row-reverse xl:mr-40 bottom"
-            headline={content?.header_pro_tip}
-            copy={content?.pro_tip}
-          />
-        </div>
+      <div className="sequence-wrap relative py-40">
+        <h2 className="stickyHeader title text-black text-center">
+          {product?.name}
+        </h2>
+        <Controller>
+          <Scene duration="200%" triggerHook="onLeave" pin>
+            {(progress?: any) => (
+              <div
+                style={{
+                  height: '100vh',
+                  position: 'relative',
+                  paddingTop: '10em',
+                }}
+              >
+                <Sequence ref={ref} progress={progress} />
+              </div>
+            )}
+          </Scene>
+          <div className="absolute top-0 grid items-start gap-96 xl:gap-80 grid-cols-1 xl:grid-cols-2 overflow-x-hidden py-20">
+            <div className="col-span-1 xl:p-20 text-lg indicator-right">
+              <ProductSection
+                className="flex-row xl:ml-20 bottom"
+                headline={content?.header_check}
+                copy={content?.product_check}
+                time={600}
+              />
+              <ProductSection
+                className="flex-row middle"
+                headline={content?.header_gain}
+                copy={content?.product_gain}
+                time={800}
+              />
+            </div>
+
+            <div className="col-span-1 xl:p-20 text-lg indicator-left">
+              <ProductSection
+                className="flex-row-reverse middle"
+                headline={content?.header_pop}
+                copy={content?.product_pop}
+                time={1200}
+              />
+              <ProductSection
+                className="flex-row-reverse top"
+                headline={content?.header_location}
+                copy={content?.product_location}
+                time={1600}
+              />
+              <ProductSection
+                className="flex-row-reverse xl:mr-40 bottom"
+                headline={content?.header_pro_tip}
+                copy={content?.pro_tip}
+                time={2000}
+              />
+            </div>
+          </div>
+        </Controller>
       </div>
+
       <div className={cn(s.root, 'fit')}>
         <div className={cn(s.productDisplay, 'fit')}>
           <div className={s.sliderContainer}>
