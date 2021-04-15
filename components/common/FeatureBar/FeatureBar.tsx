@@ -26,7 +26,7 @@ const FeatureBar: React.FC<FeatureBarProps> = ({
     className
   )
   return (
-    <div className={rootClassName}>
+    <div className={rootClassName + ' cookies_bar'}>
       <span className="block copy text-primary-2 md:inline">{title}</span>
       <span className="block copy text-primary-2 mb-6 md:inline md:mb-0 md:ml-2">
         {description}

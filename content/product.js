@@ -30,7 +30,7 @@ export const productData = [
     pro_tip:
       'If you prefer not to block your face with the pop filter for visual reasons, you can still easily address plosives by adjusting the Angle of Incidence (this is a fancy way of saying “move the mic,” and will convince your friends you went to audio engineering school). As an exercise, place your hand in front of your face and say the word “pop” over and over. Now move your hand slowly side to side as you speak. You’ll quickly notice that you only feel the puffs of air when your hand is directly in front of your mouth. Simply move the microphone up or to the side - while still pointing it at your mouth – you’ll sound as great as ever and won’t be bothered by annoying pops.',
     product_image:
-      'https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/skylight-feature.png?t=1617829952&_ga=2.158674938.1746355319.1617630931-248863279.1616771570',
+      'https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/spotlight-feature.png?t=1617829952&_ga=2.158674938.1746355319.1617630931-248863279.1616771570',
   },
   {
     product_name: 'limelight',

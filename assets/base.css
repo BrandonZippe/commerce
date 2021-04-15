@@ -205,6 +205,16 @@ a {
   background-size: contain;
 }
 
+.Limelight_360 {
+  background: #fff url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/360-mic.gif?t=1618006150&_ga=2.84930137.1300180764.1618006098-2081447066.1617906337) center center no-repeat fixed;
+  background-size: contain;
+}
+
+.U24_360 {
+  background: #fff url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/360-mic.gif?t=1618006150&_ga=2.84930137.1300180764.1618006098-2081447066.1617906337) center center no-repeat fixed;
+  background-size: contain;
+}
+
 /* .keen-slider__slide div {width: 100%;} */
 
 
@@ -278,8 +288,17 @@ a {
         padding: 10em;
 }
 
+.cookies_bar button {
+color: var(--text-primary);
+padding: .5em;
+font-family: var(--copy-font);
+font-size: 20px;
+}
+
+.cookies_bar button:hover {color: var(--text-secondary-2);}
+
 @media (min-width: 768px) {
-  .Spotlight, .u24, .Limelight {width: 50%;}
+  .Skylight, .u24, .Limelight {width: 50%;}
 }
 
 @-webkit-keyframes fadeIn {
