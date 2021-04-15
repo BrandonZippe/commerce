@@ -27,8 +27,8 @@ const FeatureBar: React.FC<FeatureBarProps> = ({
   )
   return (
     <div className={rootClassName}>
-      <span className="block md:inline">{title}</span>
-      <span className="block mb-6 md:inline md:mb-0 md:ml-2">
+      <span className="block copy text-primary-2 md:inline">{title}</span>
+      <span className="block copy text-primary-2 mb-6 md:inline md:mb-0 md:ml-2">
         {description}
       </span>
       {action && action}
