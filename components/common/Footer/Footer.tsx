@@ -97,25 +97,25 @@ const Footer: FC<Props> = ({ className, pages }) => {
               </div>
             </div>
           </div>
-          {/* <div className="col-span-1 lg:col-span-6 flex items-start lg:justify-end text-primary">
+          <div className="col-span-1 lg:col-span-6 flex items-start lg:justify-end text-primary">
             <div className="flex space-x-6 items-center h-10">
-              <a
+              {/* <a
                 aria-label="Github Repository"
                 href="https://github.com/vercel/commerce"
                 className={s.link}
               >
                 <Github />
-              </a>
+              </a> */}
               <I18nWidget />
             </div>
-          </div> */}
+          </div>
         </div>
-        <div className="py-4 flex flex-col md:flex-row justify-center items-center space-y-4 copy text-lg text-secondary">
-          <ul className="">
+        <div className="py-4 flex flex-col md:flex-row justify-start md:justify-between items-center space-y-4 copy text-lg text-secondary">
+          <ul className="flex flex-row justify-start ">
             {legalPages.map((page) => (
-              <li key={page.url} className="py-3 md:py-0 md:pb-4">
+              <li key={page.url} className="py-3 md:py-0 space-x-6">
                 <Link href={page.url!}>
-                  <a className="text-primary copy hover:text-accents-6 transition ease-in-out duration-150">
+                  <a className="text-primary-2 copy hover:text-accents-6 transition ease-in-out duration-150 text-lg">
                     {page.name}
                   </a>
                 </Link>
