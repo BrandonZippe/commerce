@@ -9,19 +9,21 @@ interface Props {
   headline: string
   description: string
   image: string
+  subHeadline?: string
 }
 
-const Featured: FC<Props> = ({ headline, description, image }) => {
+const Featured: FC<Props> = ({ headline, description, image, subHeadline }) => {
   return (
     <Container className="featured-hero">
       <div className={s.root}>
-        <h2 className="fancy text-4xl text-center leading-10 font-extrabold text-secondary sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl">
+        <h1 className="title text-primary-2 text-center leading-8">
           {headline}
-        </h2>
+        </h1>
+        <h2 className="subTitle text-secondary text-center">{subHeadline}</h2>
 
         <img className="center-max-500" src={image} alt="*" />
         <div className="flex flex-col justify-between">
-          <p className="mt-5 text-xl text-center leading-7 text-accent-2 text-white center-max-500">
+          <p className="mt-0 copy text-center text-primary leading-relaxed center-max-600">
             {description}
           </p>
           {/* <Link href="/blog">

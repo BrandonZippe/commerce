@@ -79,11 +79,12 @@ const ProductView: FC<Props> = ({ product }) => {
           ],
         }}
       />
-      <div className="bg-black wave-bg flex flex-col justify-center content-center pb-10">
+      <div className="bg-black wave-bg flex flex-col justify-center content-center pb-20">
         <Featured
           headline={product.name}
           description={product.description.replace(/<[^>]+>/g, '')}
           image={product.images[0]?.url!}
+          subHeadline="Condenser Microphone"
         />
         <Button
           aria-label="Add to Cart"
@@ -93,20 +94,21 @@ const ProductView: FC<Props> = ({ product }) => {
           loading={loading}
           disabled={!variant && product.options.length > 0}
         >
-          <span className="text-sm p-6">Add to Cart</span>
-          <span className="text-sm p-6 bg-primary-2 text-secondary">
+          <span className="copy p-6 bg-primary-2 text-purple">
             {price}
             {` `}
             {product.price?.currencyCode}
           </span>
+          <span className="copy p-6 text-primary">Add to Cart</span>
         </Button>
+        {/* <div className="gradient"></div> */}
       </div>
       <Hero headline={product.name} description={product.description} />
       <div
         className={
           product.name +
           '_360' +
-          ' bg-black relative grid items-start gap-96 xl:gap-80 grid-cols-1 xl:grid-cols-2 overflow-x-hidden py-20'
+          ' bg-primary-2 relative grid items-start gap-96 xl:gap-80 grid-cols-1 xl:grid-cols-2 overflow-x-hidden py-20'
         }
       >
         <div className="col-span-1 xl:p-20 text-lg indicator-right">

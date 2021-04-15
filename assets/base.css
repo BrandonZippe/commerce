@@ -1,16 +1,19 @@
 :root {
   --primary: rgba(81, 90, 114, 1);
   --primary-2: rgba(252, 252, 252, 1);
+  --primary-3: rgba(252, 252, 252, .7);
   --secondary: rgba(105, 91, 211, 1);
   --secondary-2: rgba(25, 25, 25, 1);
   --selection: var(--secondary);
 
   --text-base: var(--secondary-2);
   --text-primary: var(--primary-2);
-  --text-secondary: var(--secondary);
+  --text-primary-2: var(--secondary);
+  --text-secondary: var(--primary-3);
   --text-secondary-2: var(--primary);
+  --text-purple: rgba(105, 91, 211, 1);
 
-  --hover: rgba(0, 0, 0, 0.075);
+  --hover: rgba(0, 0, 0, 0075);
   --hover-1: rgba(0, 0, 0, 0.15);
   --hover-2: rgba(0, 0, 0, 0.25);
   --cyan: var(--primary);
@@ -32,8 +35,17 @@
   --accents-7: #495057;
   --accents-8: #343a40;
   --accents-9: #212529;
-  --font-sans: -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue',
+  --font-sans: "futura_light", -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue',
     'Helvetica', sans-serif;
+  --title-font: "futura_bold", 'Helvetica Neue', 'Helvetica', sans-serif, arial;
+  --subTitle-font: "futura_light", 'Helvetica Neue', 'Helvetica', sans-serif, arial;
+  --copy-font: "futura_light", 'Helvetica Neue', 'Helvetica', sans-serif, arial;
+  --title-fs: 6rem;
+  --subTitle-fs: 3rem;
+  --copy-fs: 1.5rem;
+  --title-trk: 0;
+  --subTitle-trk: .075em;
+  --copy-trk: .025em;
 }
 
 [data-theme='dark'] {
@@ -73,7 +85,7 @@
   src: url("/fonts/futura/futura_bold.ttf");
   font-style: normal;
   font-weight: normal;
-  font-display: swap;
+  font-display: fallback;
 }
 
 @font-face {
@@ -81,7 +93,7 @@
   src: url("/fonts/futura/futura_light.ttf");
   font-style: normal;
   font-weight: normal;
-  font-display: swap;
+  font-display: fallback;
 }
 
 html {
@@ -96,13 +108,14 @@ html {
 
 html,
 body {
-  font-family: "Neutra", sans-serif, arial !important;
+  font-family: "futura_light", sans-serif, arial !important;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--primary);
-  color: var(--text-base);
-  font-weight: 100;
+  color: transparent;
+  font-weight: normal;
+  font-size: 1rem;
 }
 
 body {
@@ -114,6 +127,29 @@ body {
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+/* Custom Typography */
+.title {
+  font-family: var(--title-font);
+  font-size: var(--title-fs);
+  letter-spacing: var(--title-trk);
+  text-transform: uppercase;
+}
+
+.subTitle {
+  font-family: var(--subTitle-font);
+  font-size: var(--subTitle-fs);
+  text-transform: uppercase;
+  letter-spacing: var(--subTitle-trk);
+}
+
+.copy {
+  font-family: var(--copy-font);
+  font-size: var(--copy-fs);
+  letter-spacing: var(--copy-trk);
+}
+
+.text-purple {color:rgba(105, 91, 211, 1);}
 
 .animated {
   -webkit-animation-duration: 1s;
@@ -133,6 +169,12 @@ a {
   width: 100%;
 }
 
+.center-max-600 {
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .wave-bg{
   background: #000 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/waves.png?t=1617032208) no-repeat center center fixed;
   background-size: cover;
@@ -141,31 +183,31 @@ a {
 .featured-hero {max-width: auto imp !important;}
 
 .Limelight {
-  background: #695bd3 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/limelight-feature.png?t=1617830601&_ga=2.252513609.1746355319.1617630931-248863279.1616771570) right center no-repeat;
+  background: #000 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/limelight-feature.png?t=1617830601&_ga=2.252513609.1746355319.1617630931-248863279.1616771570) right center no-repeat;
   background-size: cover;
   width: 100%;
 }
 
 .Spotlight {
-  background: #695bd3 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/spotlight-feature.png?t=1617829952&_ga=2.146145524.1746355319.1617630931-248863279.1616771570) right center no-repeat;
+  background: #000 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/spotlight-feature.png?t=1617829952&_ga=2.146145524.1746355319.1617630931-248863279.1616771570) right center no-repeat;
   background-size: cover;
   width: 100%;
 }
 
 .u24 {
-  background: #695bd3 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/u24-feature.png?t=1617830645&_ga=2.146145524.1746355319.1617630931-248863279.1616771570) right top no-repeat;
+  background: #000 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/u24-feature.png?t=1617830645&_ga=2.146145524.1746355319.1617630931-248863279.1616771570) right top no-repeat;
   background-size: cover;
   width: 100%;  
 }
 
 .Spotlight_360 {
-  background: #000 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/360-mic.gif?t=1618006150&_ga=2.84930137.1300180764.1618006098-2081447066.1617906337) center center no-repeat fixed;
+  background: #fff url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/360-mic.gif?t=1618006150&_ga=2.84930137.1300180764.1618006098-2081447066.1617906337) center center no-repeat fixed;
   background-size: contain;
 }
 
 .keen-slider__slide div {width: 100%;}
 
-.fancy {}
+
 .container-slim {
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -227,6 +269,14 @@ a {
   bottom: 100px;
 }
 
+.gradient {
+  background: linear-gradient(
+    180deg
+    , rgba(255,255,255,0) 0%, rgba(0,0,0,1) 75%);
+        float: left;
+        width: 100%;
+        padding: 10em;
+}
 
 @media (min-width: 768px) {
   .Spotlight, .u24, .Limelight {width: 50%;}
