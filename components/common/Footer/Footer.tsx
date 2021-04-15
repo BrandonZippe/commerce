@@ -97,23 +97,23 @@ const Footer: FC<Props> = ({ className, pages }) => {
               </div>
             </div>
           </div>
-          <div className="col-span-1 lg:col-span-6 flex items-start lg:justify-end text-primary">
+          {/* <div className="col-span-1 lg:col-span-6 flex items-start lg:justify-end text-primary">
             <div className="flex space-x-6 items-center h-10">
-              {/* <a
+              <a
                 aria-label="Github Repository"
                 href="https://github.com/vercel/commerce"
                 className={s.link}
               >
                 <Github />
-              </a> */}
+              </a>
               <I18nWidget />
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="py-4 flex flex-col md:flex-row justify-start md:justify-between items-center space-y-4 copy text-lg text-secondary">
-          <ul className="flex flex-row justify-start ">
+          <ul className="flex flex-col md:flex-row justify-start md:space-x-6 md:ml-4">
             {legalPages.map((page) => (
-              <li key={page.url} className="py-3 md:py-0 space-x-6">
+              <li key={page.url} className="py-3 md:py-0">
                 <Link href={page.url!}>
                   <a className="text-primary-2 copy hover:text-accents-6 transition ease-in-out duration-150 text-lg">
                     {page.name}
@@ -123,7 +123,9 @@ const Footer: FC<Props> = ({ className, pages }) => {
             ))}
           </ul>
           <div>
-            <span>&copy; 2021 512 Audio, Inc. All rights reserved.</span>
+            <span className="md:mr-4">
+              &copy; 2021 512 Audio, Inc. All rights reserved.
+            </span>
           </div>
 
           {/* <div className="flex items-center text-primary">
