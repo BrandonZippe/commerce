@@ -142,8 +142,8 @@ const ProductView: FC<Props> = ({ product }) => {
           />
         </div>
       </div>
-      <div className={cn(s.root, 'fit')}>
-        <div className={cn(s.productDisplay, 'fit')}>
+      <div className={cn(s.root)}>
+        <div className={cn(s.productDisplay)}>
           <div className={s.sliderContainer}>
             <ProductSlider key={product.id}>
               {product.images.map((image, i) => (
@@ -197,31 +197,25 @@ const ProductView: FC<Props> = ({ product }) => {
 
             <div className="pb-14 break-words w-full max-w-xl">
               <div className="flex flex-row justify-between flex-wrap w-full mb-5">
-                <h1 className="text-secondary text-4xl uppercase font-extrabold">
+                <h1 className="title text-2xl text-primary-2">
                   {product.name}
                 </h1>
               </div>
               <article>
-                <h3 className="font-bold text-sm">Features:</h3>
+                <h3 className="subTitle text-lg">Features:</h3>
                 <Text
                   html={
-                    '<p class="text-sm font-light pb-3">' +
-                    content?.product_feature +
-                    '</p>'
+                    '<p class="copy pb-3">' + content?.product_feature + '</p>'
                   }
                 />
                 <Text
-                  html={
-                    '<p class="text-sm font-light">' +
-                    content?.product_power +
-                    '</p>'
-                  }
+                  html={'<p class="copy">' + content?.product_power + '</p>'}
                 />
               </article>
             </div>
 
             <div className="pb-14 break-words w-full max-w-xl">
-              <h4 className="text-xl uppercase leading-10 font-extrabold text-secondary w-full">
+              <h4 className="subTitle text-xl uppercase leading-10 text-black w-full">
                 Technical Specifications
               </h4>
               {customFieldset?.map((fieldset: Array<string>, i: number) => (
@@ -229,10 +223,10 @@ const ProductView: FC<Props> = ({ product }) => {
                   className="flex flex-row justify-between content-center py-1"
                   key={customFieldset[i].node.entityId}
                 >
-                  <span className="text-sm font-bold">
+                  <span className="copy text-base font-bold">
                     {customFieldset[i].node.name}
                   </span>
-                  <span className="text-sm">
+                  <span className="copy text-base">
                     {customFieldset[i].node.value}
                   </span>
                 </div>
@@ -248,13 +242,12 @@ const ProductView: FC<Props> = ({ product }) => {
               loading={loading}
               disabled={!variant && product.options.length > 0}
             >
-              <span className="text-sm p-6">Add to Cart</span>
-
-              <span className="text-sm p-6 bg-primary-2 text-secondary">
+              <span className="copy p-6 bg-primary-2 text-purple">
                 {price}
                 {` `}
                 {product.price?.currencyCode}
               </span>
+              <span className="copy p-6 text-primary">Add to Cart</span>
             </Button>
           </div>
         </div>
