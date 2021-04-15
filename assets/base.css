@@ -269,7 +269,7 @@ a {
   bottom: 100px;
 }
 
-.indicatorOn {opacity: 1;transition: all linear .3s;}
+.indicatorShow {opacity: 1;transition: all linear .3s;}
 
 .gradient {
   background: linear-gradient(

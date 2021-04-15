@@ -126,48 +126,44 @@ const ProductView: FC<Props> = ({ product }) => {
               </div>
             )}
           </Scene>
-          <div className="absolute top-0 grid items-start gap-96 xl:gap-80 grid-cols-1 xl:grid-cols-2 overflow-x-hidden py-20">
-            <div className="col-span-1 xl:p-20 text-lg indicator-right">
-              <ProductSection
-                className="flex-row xl:ml-20 bottom"
-                headline={content?.header_check}
-                copy={content?.product_check}
-                time={200}
-              />
-              <ProductSection
-                className="flex-row middle"
-                headline={content?.header_gain}
-                copy={content?.product_gain}
-                time={800}
-              />
-            </div>
 
-            <div className="col-span-1 xl:p-20 text-lg indicator-left">
-              <ProductSection
-                className="flex-row-reverse middle"
-                headline={content?.header_pop}
-                copy={content?.product_pop}
-                time={400}
-              />
-              <ProductSection
-                className="flex-row-reverse top"
-                headline={content?.header_location}
-                copy={content?.product_location}
-                time={600}
-              />
-              <ProductSection
-                className="flex-row-reverse xl:mr-40 bottom"
-                headline={content?.header_pro_tip}
-                copy={content?.pro_tip}
-                time={800}
-              />
-            </div>
+          <div className="absolute top-10 py-20">
+            <ProductSection
+              className="indicatorOff"
+              headline={content?.header_check}
+              copy={content?.product_check}
+              time={1200}
+            />
+            <ProductSection
+              className="indicatorOff"
+              headline={content?.header_gain}
+              copy={content?.product_gain}
+              time={1200}
+            />
+            <ProductSection
+              className="indicatorOff"
+              headline={content?.header_pop}
+              copy={content?.product_pop}
+              time={1200}
+            />
+            <ProductSection
+              className="indicatorOff"
+              headline={content?.header_location}
+              copy={content?.product_location}
+              time={1200}
+            />
+            <ProductSection
+              className="findicatorOff"
+              headline={content?.header_pro_tip}
+              copy={content?.pro_tip}
+              time={1200}
+            />
           </div>
         </Controller>
       </div>
 
-      <div className={cn(s.root, 'fit')}>
-        <div className={cn(s.productDisplay, 'fit')}>
+      <div className={cn(s.root)}>
+        <div className={cn(s.productDisplay)}>
           <div className={s.sliderContainer}>
             <ProductSlider key={product.id}>
               {product.images.map((image, i) => (
@@ -176,8 +172,8 @@ const ProductView: FC<Props> = ({ product }) => {
                     className={s.img}
                     src={image.url!}
                     alt={image.alt || 'Product Image'}
-                    width={500}
-                    height={500}
+                    width={200}
+                    height={200}
                     priority={i === 0}
                     quality="85"
                   />
@@ -221,22 +217,22 @@ const ProductView: FC<Props> = ({ product }) => {
 
             <div className="pb-14 break-words w-full max-w-xl">
               <div className="flex flex-row justify-between flex-wrap w-full mb-5">
-                <h1 className="text-secondary text-4xl uppercase font-extrabold">
+                <h3 className="subTitle leading-20 text-black">
                   {product.name}
-                </h1>
+                </h3>
               </div>
               <article>
-                <h3 className="font-bold text-sm">Features:</h3>
+                <h4 className="copy font-bold">Features:</h4>
                 <Text
                   html={
-                    '<p class="text-sm font-light pb-3">' +
+                    '<p class="copy text-black pb-3">' +
                     content?.product_feature +
                     '</p>'
                   }
                 />
                 <Text
                   html={
-                    '<p class="text-sm font-light">' +
+                    '<p class="copy text-black pb-3">' +
                     content?.product_power +
                     '</p>'
                   }
@@ -245,7 +241,7 @@ const ProductView: FC<Props> = ({ product }) => {
             </div>
 
             <div className="pb-14 break-words w-full max-w-xl">
-              <h4 className="text-xl uppercase leading-10 font-extrabold text-secondary w-full">
+              <h4 className="copy text-primary w-full">
                 Technical Specifications
               </h4>
               {customFieldset?.map((fieldset: Array<string>, i: number) => (
@@ -253,12 +249,10 @@ const ProductView: FC<Props> = ({ product }) => {
                   className="flex flex-row justify-between content-center py-1"
                   key={customFieldset[i].node.entityId}
                 >
-                  <span className="text-sm font-bold">
+                  <span className="copy font-bold">
                     {customFieldset[i].node.name}
                   </span>
-                  <span className="text-sm">
-                    {customFieldset[i].node.value}
-                  </span>
+                  <span className="copy">{customFieldset[i].node.value}</span>
                 </div>
               ))}
             </div>
@@ -272,13 +266,12 @@ const ProductView: FC<Props> = ({ product }) => {
               loading={loading}
               disabled={!variant && product.options.length > 0}
             >
-              <span className="text-sm p-6">Add to Cart</span>
-
-              <span className="text-sm p-6 bg-primary-2 text-secondary">
+              <span className="copy p-6 bg-primary-2 text-purple">
                 {price}
                 {` `}
                 {product.price?.currencyCode}
               </span>
+              <span className="copy p-6 text-primary">Add to Cart</span>
             </Button>
           </div>
         </div>
