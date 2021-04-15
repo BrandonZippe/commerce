@@ -110,7 +110,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
             </div>
           </div> */}
         </div>
-        <div className="py-4 flex flex-col md:flex-row justify-start md:justify-between items-center space-y-4 copy text-lg text-secondary">
+        <div className="py-4 flex flex-col md:flex-row justify-start md:justify-between items-center copy text-lg text-secondary">
           <ul className="flex flex-col md:flex-row justify-start md:space-x-6 md:ml-4">
             {legalPages.map((page) => (
               <li key={page.url} className="py-3 md:py-0">
