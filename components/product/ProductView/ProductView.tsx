@@ -108,7 +108,7 @@ const ProductView: FC<Props> = ({ product }) => {
         className={
           product.name +
           '_360' +
-          ' bg-primary-2 relative grid items-start gap-96 xl:gap-80 grid-cols-1 xl:grid-cols-2 overflow-x-hidden py-20'
+          ' bg-black relative grid items-start gap-96 xl:gap-80 grid-cols-1 xl:grid-cols-2 overflow-x-hidden py-20'
         }
       >
         <div className="col-span-1 xl:p-20 text-lg indicator-right">
