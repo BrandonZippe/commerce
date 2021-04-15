@@ -115,7 +115,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
             {legalPages.map((page) => (
               <li key={page.url} className="py-3 md:py-0">
                 <Link href={page.url!}>
-                  <a className="text-primary-2 copy hover:text-accents-6 transition ease-in-out duration-150 text-lg">
+                  <a className="text-secondary copy hover:text-accents-6 transition ease-in-out duration-150 text-lg">
                     {page.name}
                   </a>
                 </Link>
