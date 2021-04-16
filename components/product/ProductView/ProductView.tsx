@@ -111,9 +111,6 @@ const ProductView: FC<Props> = ({ product }) => {
       <Hero headline={product.name} description={product.description} />
 
       <div className="sequence-wrap relative py-40">
-        <h2 className="stickyHeader title text-black text-center">
-          {product?.name}
-        </h2>
         <Controller>
           <Scene duration="200%" triggerHook="onLeave" pin>
             {(progress: any) => (
@@ -134,31 +131,31 @@ const ProductView: FC<Props> = ({ product }) => {
               className="indicatorOff"
               headline={content?.header_check}
               copy={content?.product_check}
-              time={1200}
+              time={200}
             />
             <ProductSection
               className="indicatorOff"
               headline={content?.header_gain}
               copy={content?.product_gain}
-              time={1200}
+              time={200}
             />
             <ProductSection
               className="indicatorOff"
               headline={content?.header_pop}
               copy={content?.product_pop}
-              time={1200}
+              time={200}
             />
             <ProductSection
               className="indicatorOff"
               headline={content?.header_location}
               copy={content?.product_location}
-              time={1200}
+              time={200}
             />
             <ProductSection
               className="findicatorOff"
               headline={content?.header_pro_tip}
               copy={content?.pro_tip}
-              time={1200}
+              time={200}
             />
           </div>
         </Controller>
