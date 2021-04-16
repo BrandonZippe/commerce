@@ -15,11 +15,7 @@
 }
 
 .logo {
-  @apply cursor-pointer rounded-full border transform duration-100 ease-in-out;
-  height: 46px;
-  border-color: #000;
-  padding-top: 6px;
-  background: #fcfcfc;
+  @apply cursor-pointer transform duration-100 ease-in-out;
 
   
 

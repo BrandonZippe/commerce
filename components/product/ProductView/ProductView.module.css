@@ -7,11 +7,12 @@
 }
 
 .productDisplay {
-  @apply relative flex px-0 pb-0 box-border col-span-1 bg-primary-2 max-h-850 min-h-500 col-start-2;
+  @apply relative flex px-0 pb-0 box-border col-span-1 bg-primary-2 max-h-850 min-h-500;
 
 
   @screen md {
     min-height: 700px;
+    @apply col-start-2;
   }
 
   @screen lg {

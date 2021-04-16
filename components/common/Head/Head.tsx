@@ -12,13 +12,19 @@ const Head: FC = () => {
         <link rel="manifest" href="/site.webmanifest" key="site-manifest" />
         <link
           rel="preload"
-          href="/fonts/futura/futura_light.ttf"
+          href="/fonts/futura/futura_light.otf"
           as="font"
           crossOrigin=""
         />
         <link
           rel="preload"
-          href="/fonts/futura/futura_bold.ttf"
+          href="/fonts/futura/futura_bold.otf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/futura/futura_med.otf"
           as="font"
           crossOrigin=""
         />

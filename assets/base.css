@@ -82,7 +82,7 @@
 
 @font-face {
   font-family: "futura_bold";
-  src: url("/fonts/futura/futura_bold.ttf");
+  src: url("/fonts/futura/futura_bold.otf");
   font-style: normal;
   font-weight: normal;
   font-display: fallback;
@@ -90,7 +90,15 @@
 
 @font-face {
   font-family: "futura_light";
-  src: url("/fonts/futura/futura_light.ttf");
+  src: url("/fonts/futura/futura_light.otf");
+  font-style: normal;
+  font-weight: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "futura_med";
+  src: url("/fonts/futura/futura_med.otf");
   font-style: normal;
   font-weight: normal;
   font-display: fallback;
@@ -176,8 +184,8 @@ a {
 }
 
 .wave-bg{
-  background: #000 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/waves.png?t=1617032208) no-repeat center center fixed;
-  background-size: cover;
+  background: #000 url("../public/Waves.svg") no-repeat center center fixed;
+  background-size: contain;
 }
 
 .featured-hero {max-width: auto !important;}
@@ -295,7 +303,7 @@ font-family: var(--copy-font);
 font-size: 20px;
 }
 
-.cookies_bar button:hover {color: var(--text-secondary-2);}
+.cookies_bar button:hover, button.toCart:hover span {color: var(--text-purple) !important;}
 
 @media (min-width: 768px) {
   .Skylight, .u24, .Limelight {width: 50%;}

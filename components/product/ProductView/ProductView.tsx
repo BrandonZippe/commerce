@@ -89,17 +89,19 @@ const ProductView: FC<Props> = ({ product }) => {
         <Button
           aria-label="Add to Cart"
           type="button"
-          className="m-auto mb-8 flex flex-row justify-between align-center px-0"
+          className="m-auto mb-8 flex flex-row justify-between align-center px-0 toCart"
           onClick={addToCart}
           loading={loading}
           disabled={!variant && product.options.length > 0}
         >
-          <span className="copy p-6 bg-primary-2 text-purple">
+          <span className="copy p-6 bg-primary-2 text-purple ">
             {price}
             {` `}
             {product.price?.currencyCode}
           </span>
-          <span className="copy p-6 text-primary">Add to Cart</span>
+          <span className="copy p-6 text-primary hover:text-purple">
+            Add to Cart
+          </span>
         </Button>
         {/* <div className="gradient"></div> */}
       </div>
@@ -142,7 +144,7 @@ const ProductView: FC<Props> = ({ product }) => {
           />
         </div>
       </div>
-      <div className={cn(s.root)}>
+      <div className={cn(s.root) + ' p-4 md:p-0'}>
         <div className={cn(s.productDisplay)}>
           <div className={s.sliderContainer}>
             <ProductSlider key={product.id}>
@@ -197,25 +199,40 @@ const ProductView: FC<Props> = ({ product }) => {
 
             <div className="pb-14 break-words w-full max-w-xl">
               <div className="flex flex-row justify-between flex-wrap w-full mb-5">
-                <h1 className="title text-2xl text-primary-2">
-                  {product.name}
-                </h1>
+                <h1 className="title text-5xl text-black">{product.name}</h1>
               </div>
               <article>
-                <h3 className="subTitle text-lg">Features:</h3>
                 <Text
                   html={
-                    '<p class="copy pb-3">' + content?.product_feature + '</p>'
+                    '<p class="copy leading-8 pb-10">' +
+                    content?.product_feature +
+                    '</p>'
                   }
                 />
-                <Text
-                  html={'<p class="copy">' + content?.product_power + '</p>'}
-                />
+                {/* <Text
+                  html={'<p class="copy leading-8">' + content?.product_power + '</p>'}
+                /> */}
               </article>
             </div>
-
+            <div className="pb-4 flex flex-row justify-between max-w-xl">
+              <Button
+                aria-label="Add to Cart"
+                type="button"
+                className="m-auto mb-20 flex flex-row justify-between align-center px-0 toCart"
+                onClick={addToCart}
+                loading={loading}
+                disabled={!variant && product.options.length > 0}
+              >
+                <span className="copy p-6 bg-primary-2 text-purple">
+                  {price}
+                  {` `}
+                  {product.price?.currencyCode}
+                </span>
+                <span className="copy p-6 text-primary">Add to Cart</span>
+              </Button>
+            </div>
             <div className="pb-14 break-words w-full max-w-xl">
-              <h4 className="subTitle text-xl uppercase leading-10 text-black w-full">
+              <h4 className="subTitle text-xl leading-10 text-black w-full font-bold">
                 Technical Specifications
               </h4>
               {customFieldset?.map((fieldset: Array<string>, i: number) => (
@@ -233,23 +250,6 @@ const ProductView: FC<Props> = ({ product }) => {
               ))}
             </div>
           </section>
-          <div className="pb-4 flex flex-row justify-between max-w-xl">
-            <Button
-              aria-label="Add to Cart"
-              type="button"
-              className="m-auto mb-8 flex flex-row justify-between align-center px-0"
-              onClick={addToCart}
-              loading={loading}
-              disabled={!variant && product.options.length > 0}
-            >
-              <span className="copy p-6 bg-primary-2 text-purple">
-                {price}
-                {` `}
-                {product.price?.currencyCode}
-              </span>
-              <span className="copy p-6 text-primary">Add to Cart</span>
-            </Button>
-          </div>
         </div>
         {/* {process.env.COMMERCE_WISHLIST_ENABLED && (
           <WishlistButton
