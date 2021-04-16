@@ -61,7 +61,7 @@ const ProductView: FC<Props> = ({ product }) => {
   //define content
   let key = product.name
   const content = productData.find((e) => e.product_name === key.toLowerCase())
-  const ref = useRef()
+  const ref = useRef() as React.MutableRefObject<HTMLDivElement>
 
   return (
     <Container className="max-w-none w-full" clean>
@@ -116,7 +116,7 @@ const ProductView: FC<Props> = ({ product }) => {
         </h2>
         <Controller>
           <Scene duration="200%" triggerHook="onLeave" pin>
-            {(progress?: any) => (
+            {(progress: any) => (
               <div
                 style={{
                   height: '100vh',
@@ -124,7 +124,7 @@ const ProductView: FC<Props> = ({ product }) => {
                   paddingTop: '10em',
                 }}
               >
-                <Sequence ref={ref} progress={progress} />
+                <Sequence ref={ref} progress={progress} {...progress} />
               </div>
             )}
           </Scene>
