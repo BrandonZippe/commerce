@@ -60,7 +60,7 @@ const ProductSlider: FC = ({ children }) => {
   }, [])
 
   return (
-    <div className={s.root + ' p-10 md:p-0'} ref={sliderContainerRef}>
+    <div className={s.root} ref={sliderContainerRef}>
       <button
         className={cn(s.leftControl, s.control)}
         onClick={slider?.prev}
