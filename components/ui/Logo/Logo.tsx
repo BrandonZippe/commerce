@@ -16,11 +16,13 @@ const Logo = ({ className = '', ...props }) => (
   //     fill="var(--primary)"
   //   />
   // </svg>
+
   <img
-    src="https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/wa-512-audio-logodelivery-002.png?t=1617033708&_ga=2.133605131.42426866.1617026311-248863279.1616771570"
+    src="../512_audio_badge.svg"
     alt="logo"
     width="46px"
-    height="32px"
+    height="46px"
+    className="bg-white rounded-full"
   />
 )
 

@@ -82,7 +82,7 @@
 
 @font-face {
   font-family: "futura_bold";
-  src: url("/fonts/futura/futura_bold.ttf");
+  src: url("/fonts/futura/futura_bold.otf");
   font-style: normal;
   font-weight: normal;
   font-display: auto;
@@ -90,7 +90,15 @@
 
 @font-face {
   font-family: "futura_light";
-  src: url("/fonts/futura/futura_light.ttf");
+  src: url("/fonts/futura/futura_light.otf");
+  font-style: normal;
+  font-weight: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "futura_med";
+  src: url("/fonts/futura/futura_med.otf");
   font-style: normal;
   font-weight: normal;
   font-display: fallback;
@@ -176,11 +184,11 @@ a {
 }
 
 .wave-bg{
-  background: #000 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/waves.png?t=1617032208) no-repeat center center fixed;
-  background-size: cover;
+  background: #000 url("../public/Waves.svg") no-repeat center center fixed;
+  background-size: contain;
 }
 
-.featured-hero {max-width: auto imp !important;}
+.featured-hero {max-width: auto !important;}
 
 .Limelight {
   background: #000 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/limelight-feature.png?t=1617830601&_ga=2.252513609.1746355319.1617630931-248863279.1616771570) right center no-repeat;
@@ -188,7 +196,7 @@ a {
   width: 100%;
 }
 
-.Spotlight {
+.Skylight {
   background: #000 url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/spotlight-feature.png?t=1617829952&_ga=2.146145524.1746355319.1617630931-248863279.1616771570) right center no-repeat;
   background-size: cover;
   width: 100%;
@@ -200,12 +208,22 @@ a {
   width: 100%;  
 }
 
-.Spotlight_360 {
+.Skylight_360 {
   background: #fff url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/360-mic.gif?t=1618006150&_ga=2.84930137.1300180764.1618006098-2081447066.1617906337) center center no-repeat fixed;
   background-size: contain;
 }
 
-.keen-slider__slide div {width: 100%;}
+.Limelight_360 {
+  background: #fff url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/360-mic.gif?t=1618006150&_ga=2.84930137.1300180764.1618006098-2081447066.1617906337) center center no-repeat fixed;
+  background-size: contain;
+}
+
+.U24_360 {
+  background: #fff url(https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/360-mic.gif?t=1618006150&_ga=2.84930137.1300180764.1618006098-2081447066.1617906337) center center no-repeat fixed;
+  background-size: contain;
+}
+
+/* .keen-slider__slide div {width: 100%;} */
 
 
 .container-slim {
@@ -321,9 +339,17 @@ a {
     }
   }
 }
+.cookies_bar button {
+color: var(--text-primary);
+padding: .5em;
+font-family: var(--copy-font);
+font-size: 20px;
+}
+
+.cookies_bar button:hover, button.toCart:hover span {color: var(--text-purple) !important;}
 
 @media (min-width: 768px) {
-  .Spotlight, .u24, .Limelight {width: 50%;}
+  .Skylight, .u24, .Limelight {width: 50%;}
 }
 
 @-webkit-keyframes fadeIn {

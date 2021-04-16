@@ -19,7 +19,7 @@ const Hero: FC<Props> = ({ headline, description }) => {
     <div className="bg-black relative">
       <Container className="container-slim">
         <div className={s.root}>
-          <div className="p-4 w-full md:w-2/4 md:p-40">
+          <div className="p-4 w-full md:w-2/4 md:p-20 2xl:p-40">
             <h2 className="subTitle text-primary">{content?.header_intro}</h2>
             <p className="copy text-primary">{content?.product_intro}</p>
 

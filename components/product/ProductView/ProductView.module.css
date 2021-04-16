@@ -7,19 +7,23 @@
 }
 
 .productDisplay {
-  @apply relative flex px-0 pb-0 box-border col-span-1 bg-secondary-2;
-  min-height: 600px;
+  @apply relative flex px-0 pb-0 box-border col-span-1 bg-primary-2 max-h-850 min-h-500;
+
 
   @screen md {
     min-height: 700px;
+    @apply col-start-2;
   }
 
   @screen lg {
     margin-right: -2rem;
     margin-left: -2rem;
-    @apply mx-0 col-span-6;
-    min-height: 100%;
+    @apply mx-0 col-span-3 col-start-2;
     height: 100%;
+  }
+  
+  @screen 2xl {
+    @apply col-start-3;
   }
 }
 
@@ -58,7 +62,7 @@
   @apply flex flex-col col-span-1 mx-auto max-w-8xl px-6 w-full h-full;
 
   @screen lg {
-    @apply col-span-6 py-10 justify-between;
+    @apply col-span-6 col-start-7 py-10 justify-between;
   }
 }
 

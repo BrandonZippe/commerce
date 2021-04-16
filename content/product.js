@@ -1,19 +1,19 @@
 export const productData = [
   {
-    product_name: 'spotlight',
+    product_name: 'skylight',
     header_description:
-      'Welcome to Spotlight, a Studio Quality Condenser Microphone from 512 Audio',
+      'Welcome to Skylight, a Studio Quality Condenser Microphone from 512 Audio',
     product_description:
-      'Whether you Podcast, Broadcast, Stream, Play or Produce, 512 Audio’s new Spotlight Condenser Microphone delivers the studio quality sound you and your listeners demand. Designed by engineers with a deep passion for audio, Spotlight is ready to bring your voice to the world. Let’s begin.',
-    header_intro: 'Step into the Spotlight',
+      'Whether you Podcast, Broadcast, Stream, Play or Produce, 512 Audio’s new Skylight Condenser Microphone delivers the studio quality sound you and your listeners demand. Designed by engineers with a deep passion for audio, Skylight is ready to bring your voice to the world. Let’s begin.',
+    header_intro: 'Step into the Skylight',
     product_intro:
-      'On the bottom of the microphone is the XLR connector which accepts a standard 3-pin microphone cable for easy, secure connection to your audio mixer, interface or portable recorder. Spotlight is a side-address design, which means that it picks up audio coming in to the side of the microphone, not the end. For easy reference, the “front” of the microphone body carries the 512 Audio badge, so just point the side with the badge towards the speaker you’re trying to capture and you’ll be ready to go.',
+      'On the bottom of the microphone is the XLR connector which accepts a standard 3-pin microphone cable for easy, secure connection to your audio mixer, interface or portable recorder. Skylight is a side-address design, which means that it picks up audio coming in to the side of the microphone, not the end. For easy reference, the “front” of the microphone body carries the 512 Audio badge, so just point the side with the badge towards the speaker you’re trying to capture and you’ll be ready to go.',
     header_feature: 'Shock Treatment',
     product_feature:
-      'Your Spotlight microphone includes an adjustable Shock Mount cradle designed to gracefully suspend the microphone exactly where you need it, which not only looks great but protects your audio from the thumps and booms of stomping feet and table-tapping guests. Simply attach the Shock Mount to your boom arm or mic stand, slip Spotlight into place and tighten the bottom ring to snug everything into place. Lastly, connect an XLR mic cable and run it from Spotlight to your mixer, interface or portable recorder.',
+      'Your Skylight microphone includes an adjustable Shock Mount cradle designed to gracefully suspend the microphone exactly where you need it, which not only looks great but protects your audio from the thumps and booms of stomping feet and table-tapping guests. Simply attach the Shock Mount to your boom arm or mic stand, slip Skylight into place and tighten the bottom ring to snug everything into place. Lastly, connect an XLR mic cable and run it from Skylight to your mixer, interface or portable recorder.',
     header_power: 'I Got the Power',
     product_power:
-      'Spotlight is a condenser microphone, which contributes to its lush tone and sensitivity. It also means that it requires 48 Volts of external power to operate (which is sometimes referred to as “Phantom Power”). Most USB audio interfaces, modern mixers, and recording devices are equipped with phantom power, which is typically accessible via a switch or button labeled “48V” somewhere near the microphone input or on the front or back panel. (NOTE: Before turning on phantom power, it’s a good idea to turn your speakers down or take off your headphones, as there’s often a bit of a “pop” sound as the power first kicks on.) Once you’re connected and powered on, you’re ready to rock.',
+      'Skylight is a condenser microphone, which contributes to its lush tone and sensitivity. It also means that it requires 48 Volts of external power to operate (which is sometimes referred to as “Phantom Power”). Most USB audio interfaces, modern mixers, and recording devices are equipped with phantom power, which is typically accessible via a switch or button labeled “48V” somewhere near the microphone input or on the front or back panel. (NOTE: Before turning on phantom power, it’s a good idea to turn your speakers down or take off your headphones, as there’s often a bit of a “pop” sound as the power first kicks on.) Once you’re connected and powered on, you’re ready to rock.',
     header_check: 'Check One. Check Two.',
     product_check:
       'Now that you’re up and running, let’s take a few moments to talk about how to get the best out of your new microphone. Here are a few tips to help you sound your best:',
@@ -22,7 +22,7 @@ export const productData = [
       'Not to be confused with volume, the Gain setting on your mixer, interface, or portable recorder is used to both provide a clear, noise-free signal and to shape the tone of your recording to suit your creative fancy. This all-important setting controls the sensitivity of the microphone and allows you to determine how much the sound of your room is captured along with your voice or instrument. Setting the gain on the low side and moving in close to the microphone will produce a breathy, intimate tone that’s perfect for any major motion picture trailers that you might be hired to narrate. This will also reduce the amount of reverberation and room echo that the microphone will hear. By the same token, increasing the gain and moving further from the microphone will allow more of the sound of your room to be captured, adding a nice “live” feel. A few minutes of experimentation with the gain setting and microphone placement will not only let you say classic things like “Test, test” and “Check one – Check two” like a pro, but will help you to quickly zero in on your signature sound.',
     header_pop: 'Mind your Ps and Ts',
     product_pop:
-      'To help tame popping Ps and thumping Ts, Spotlight comes complete with a custom Pop Filter. Simply use the two elastic bands to position the pop filter over the top of the microphone, so that it sits between the mic and your mouth. This will help to remove any small bursts of air from these powerful plosives but will still let your voice shine through loud and clear.',
+      'To help tame popping Ps and thumping Ts, Skylight comes complete with a custom Pop Filter. Simply use the two elastic bands to position the pop filter over the top of the microphone, so that it sits between the mic and your mouth. This will help to remove any small bursts of air from these powerful plosives but will still let your voice shine through loud and clear.',
     header_location: 'Location, Location, Location',
     product_location:
       'Now that you’re up and running, let’s take a few moments to talk about how to get the best out of your new microphone. Here are a few tips to help you sound your best:',
