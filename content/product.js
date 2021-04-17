@@ -1,7 +1,6 @@
 export const productData = [
   {
     product_name: 'skylight',
-    product_type: 'Condenser Microphone',
     header_description:
       'Welcome to Skylight, a Studio Quality Condenser Microphone from 512 Audio',
     product_description:
@@ -33,7 +32,6 @@ export const productData = [
   },
   {
     product_name: 'limelight',
-    product_type: 'End-Address Microphone',
     header_description:
       'Welcome to Limelight, a Dynamic Microphone from 512 Audio',
     product_description:
@@ -67,7 +65,6 @@ export const productData = [
   },
   {
     product_name: 'u24',
-    product_type: 'End-Address Microphone',
     header_description: 'Welcome to U24, a Dynamic Microphone from 512 Audio',
     product_description:
       'Whether you’re Podcasting, Broadcasting, Streaming, Gaming or Recording, the new U24 dynamic microphone is your key to studio quality sound – no engineering degree needed. Designed by engineers with a deep passion for audio, U24 is easy to use, built like a tank, and ready to help you bring your voice to the world. So let’s get started.',
