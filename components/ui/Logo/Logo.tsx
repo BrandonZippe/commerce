@@ -22,7 +22,8 @@ const Logo = ({ className = '', ...props }) => (
     alt="logo"
     width="46px"
     height="46px"
-    className="bg-white rounded-full"
+    className={className + 'bg-white rounded-full'}
+    {...props}
   />
 )
 
