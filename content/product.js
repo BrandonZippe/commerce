@@ -17,19 +17,17 @@ export const productData = [
       'Skylight is a condenser microphone, which contributes to its lush tone and sensitivity. It also means that it requires 48 Volts of external power to operate (which is sometimes referred to as “Phantom Power”). Most USB audio interfaces, modern mixers, and recording devices are equipped with phantom power, which is typically accessible via a switch or button labeled “48V” somewhere near the microphone input or on the front or back panel. (NOTE: Before turning on phantom power, it’s a good idea to turn your speakers down or take off your headphones, as there’s often a bit of a “pop” sound as the power first kicks on.) Once you’re connected and powered on, you’re ready to rock.',
     header_check: 'Check One. Check Two.',
     product_check:
-      'Now that you’re up and running, let’s take a few moments to talk about how to get the best out of your new microphone. Here are a few tips to help you sound your best:',
+      'Custom vintage-inspired K67-style capsule contributes both body and air.',
     header_gain: 'Playing the Gain',
     product_gain:
-      'Not to be confused with volume, the Gain setting on your mixer, interface, or portable recorder is used to both provide a clear, noise-free signal and to shape the tone of your recording to suit your creative fancy. This all-important setting controls the sensitivity of the microphone and allows you to determine how much the sound of your room is captured along with your voice or instrument. Setting the gain on the low side and moving in close to the microphone will produce a breathy, intimate tone that’s perfect for any major motion picture trailers that you might be hired to narrate. This will also reduce the amount of reverberation and room echo that the microphone will hear. By the same token, increasing the gain and moving further from the microphone will allow more of the sound of your room to be captured, adding a nice “live” feel. A few minutes of experimentation with the gain setting and microphone placement will not only let you say classic things like “Test, test” and “Check one – Check two” like a pro, but will help you to quickly zero in on your signature sound.',
+      'Pattern switch offers both cardioid and omni patterns for flexibility.',
     header_pop: 'Mind your Ps and Ts',
-    product_pop:
-      'To help tame popping Ps and thumping Ts, Skylight comes complete with a custom Pop Filter. Simply use the two elastic bands to position the pop filter over the top of the microphone, so that it sits between the mic and your mouth. This will help to remove any small bursts of air from these powerful plosives but will still let your voice shine through loud and clear.',
+    product_pop: 'Mesh grille helps tame plosives from bursts of air.',
     header_location: 'Location, Location, Location',
-    product_location:
-      'Now that you’re up and running, let’s take a few moments to talk about how to get the best out of your new microphone. Here are a few tips to help you sound your best:',
+    product_location: '6AU6 vacuum tube adds girth and warmth.',
     header_pro_tip: 'pro tip:',
     pro_tip:
-      'If you prefer not to block your face with the pop filter for visual reasons, you can still easily address plosives by adjusting the Angle of Incidence (this is a fancy way of saying “move the mic,” and will convince your friends you went to audio engineering school). As an exercise, place your hand in front of your face and say the word “pop” over and over. Now move your hand slowly side to side as you speak. You’ll quickly notice that you only feel the puffs of air when your hand is directly in front of your mouth. Simply move the microphone up or to the side - while still pointing it at your mouth – you’ll sound as great as ever and won’t be bothered by annoying pops.',
+      'Custom heat sink moves heat from the tube outside of the mic body, drastically reducing self-noise.',
     product_image:
       'https://cdn11.bigcommerce.com/s-ismvg5snnx/product_images/uploaded_images/spotlight-feature.png?t=1617829952&_ga=2.158674938.1746355319.1617630931-248863279.1616771570',
   },

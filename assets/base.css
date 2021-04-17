@@ -232,11 +232,8 @@ a {
 }
 
 .content-wrap {
-  border: solid 1px var(--primary-2);
   padding: 1em;
-  border-radius: 1rem;
   max-width: 450px;
-  background: var(--black);
   z-index: 1;
 
 }
@@ -253,7 +250,7 @@ a {
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  background: var(--primary);
+  background: var(--secondary);
   position: absolute;
   top: -10px;
   border: solid 2px var(--primary-2);
@@ -347,6 +344,16 @@ font-size: 20px;
 }
 
 .cookies_bar button:hover, button.toCart:hover span {color: var(--text-purple) !important;}
+
+.indicatorOff {
+  opacity: 0;
+}
+
+.check {
+  position: absolute;
+  top: 18%;
+  transition: all ease .5s;
+}
 
 @media (min-width: 768px) {
   .Skylight, .u24, .Limelight {width: 50%;}

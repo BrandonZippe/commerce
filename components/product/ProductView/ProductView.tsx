@@ -18,6 +18,7 @@ import { productData } from '../../../content/product'
 import ProductSection from '../ProductSection/ProductSection'
 import { Controller, Scene } from 'react-scrollmagic'
 import Sequence from '../Sequence'
+import { Tween, Timeline } from 'react-gsap'
 
 interface Props {
   className?: string
@@ -112,7 +113,7 @@ const ProductView: FC<Props> = ({ product }) => {
 
       <div className="sequence-wrap relative py-40">
         <Controller>
-          <Scene duration="200%" triggerHook="onLeave" pin>
+          <Scene duration="4000" triggerHook={-0.5} pin>
             {(progress: any) => (
               <div
                 style={{
@@ -126,38 +127,69 @@ const ProductView: FC<Props> = ({ product }) => {
             )}
           </Scene>
 
-          <div className="absolute top-10 py-20">
-            <ProductSection
-              className="indicatorOff"
-              headline={content?.header_check}
-              copy={content?.product_check}
-              time={200}
-            />
-            <ProductSection
-              className="indicatorOff"
-              headline={content?.header_gain}
-              copy={content?.product_gain}
-              time={200}
-            />
-            <ProductSection
-              className="indicatorOff"
-              headline={content?.header_pop}
-              copy={content?.product_pop}
-              time={200}
-            />
-            <ProductSection
-              className="indicatorOff"
-              headline={content?.header_location}
-              copy={content?.product_location}
-              time={200}
-            />
-            <ProductSection
-              className="findicatorOff"
-              headline={content?.header_pro_tip}
-              copy={content?.pro_tip}
-              time={200}
-            />
-          </div>
+          <Scene triggerHook={-0.6} duration={4000} pin>
+            {(progress: number | undefined) => (
+              <div className="absolute top-10 py-20">
+                <Timeline
+                  totalProgress={progress}
+                  {...progress}
+                  delay={400}
+                  paused
+                >
+                  <Timeline
+                    target={
+                      <ProductSection
+                        className="check indicator-right bottom"
+                        headline={content?.header_check}
+                        copy={content?.product_check}
+                      />
+                    }
+                  >
+                    <Tween to={{ x: 1000, ease: 'bounce.out', duration: 3 }} />
+                  </Timeline>
+                  <Timeline
+                    target={
+                      <ProductSection
+                        className="gain indicator-left bottom"
+                        headline={content?.header_gain}
+                        copy={content?.product_gain}
+                      />
+                    }
+                  ></Timeline>
+                  <Timeline
+                    target={
+                      <ProductSection
+                        className="pop indicator-left bottom"
+                        headline={content?.header_pop}
+                        copy={content?.product_pop}
+                        time={200}
+                      />
+                    }
+                  ></Timeline>
+                  <Timeline
+                    target={
+                      <ProductSection
+                        className="location indicator-right bottom"
+                        headline={content?.header_location}
+                        copy={content?.product_location}
+                        time={200}
+                      />
+                    }
+                  ></Timeline>
+                  <Timeline
+                    target={
+                      <ProductSection
+                        className="tip indicator-left bottom"
+                        headline={content?.header_pro_tip}
+                        copy={content?.pro_tip}
+                        time={200}
+                      />
+                    }
+                  ></Timeline>
+                </Timeline>
+              </div>
+            )}
+          </Scene>
         </Controller>
       </div>
       <div className={cn(s.root) + ' p-4 md:p-0'}>
