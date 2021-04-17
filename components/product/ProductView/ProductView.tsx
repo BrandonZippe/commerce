@@ -127,7 +127,7 @@ const ProductView: FC<Props> = ({ product }) => {
             )}
           </Scene>
 
-          <Scene triggerHook={-0.6} duration={4000} pin>
+          <Scene triggerHook={-0.9} duration={4000} pin>
             {(progress: number | undefined) => (
               <div className="absolute top-10 py-20">
                 <Timeline
@@ -136,56 +136,38 @@ const ProductView: FC<Props> = ({ product }) => {
                   delay={400}
                   paused
                 >
-                  <Timeline
-                    target={
-                      <ProductSection
-                        className="check indicator-right bottom"
-                        headline={content?.header_check}
-                        copy={content?.product_check}
-                      />
-                    }
-                  >
-                    <Tween to={{ x: 1000, ease: 'bounce.out', duration: 3 }} />
-                  </Timeline>
-                  <Timeline
-                    target={
-                      <ProductSection
-                        className="gain indicator-left bottom"
-                        headline={content?.header_gain}
-                        copy={content?.product_gain}
-                      />
-                    }
-                  ></Timeline>
-                  <Timeline
-                    target={
-                      <ProductSection
-                        className="pop indicator-left bottom"
-                        headline={content?.header_pop}
-                        copy={content?.product_pop}
-                        time={200}
-                      />
-                    }
-                  ></Timeline>
-                  <Timeline
-                    target={
-                      <ProductSection
-                        className="location indicator-right bottom"
-                        headline={content?.header_location}
-                        copy={content?.product_location}
-                        time={200}
-                      />
-                    }
-                  ></Timeline>
-                  <Timeline
-                    target={
-                      <ProductSection
-                        className="tip indicator-left bottom"
-                        headline={content?.header_pro_tip}
-                        copy={content?.pro_tip}
-                        time={200}
-                      />
-                    }
-                  ></Timeline>
+                  <ProductSection
+                    className="check indicator-right bottom"
+                    headline={content?.header_check}
+                    copy={content?.product_check}
+                  />
+
+                  <ProductSection
+                    className="gain indicator-left bottom"
+                    headline={content?.header_gain}
+                    copy={content?.product_gain}
+                  />
+
+                  <ProductSection
+                    className="pop indicator-left bottom"
+                    headline={content?.header_pop}
+                    copy={content?.product_pop}
+                    time={200}
+                  />
+
+                  <ProductSection
+                    className="location indicator-right bottom"
+                    headline={content?.header_location}
+                    copy={content?.product_location}
+                    time={200}
+                  />
+
+                  <ProductSection
+                    className="tip indicator-left bottom"
+                    headline={content?.header_pro_tip}
+                    copy={content?.pro_tip}
+                    time={200}
+                  />
                 </Timeline>
               </div>
             )}
