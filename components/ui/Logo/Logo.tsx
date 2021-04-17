@@ -19,7 +19,7 @@ const Logo = ({ className = '', ...props }) => (
 
   <img
     src="../512_audio_badge.svg"
-    alt="logo"
+    alt="512 Audio"
     width="46px"
     height="46px"
     className={className + 'bg-white rounded-full'}
