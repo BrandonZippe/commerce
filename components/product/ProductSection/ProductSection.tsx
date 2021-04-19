@@ -7,18 +7,21 @@ interface Props {
   className?: string
   headline?: string
   copy?: string
-  time?: number
-  from?: object
-  to?: object
+  toAnime: object
+  fromAnime: object
 }
 
-const ProductSection: FC<Props> = ({ headline, copy, className, from, to }) => {
+const ProductSection: FC<Props> = ({
+  headline,
+  copy,
+  className,
+  toAnime,
+  fromAnime,
+}) => {
   return (
     <Timeline
       target={
-        <article
-          className={className + ' flex justify-start relative p-4 xl:my-20'}
-        >
+        <article className={className + ' flex absolute p-4 indicatorWrap'}>
           <div className="content-wrap">
             <h3 className="subTitle text-3xl text-black">{headline}</h3>
             <p className="copy text-black">{copy}</p>
@@ -27,7 +30,8 @@ const ProductSection: FC<Props> = ({ headline, copy, className, from, to }) => {
         </article>
       }
     >
-      <Tween duration={500} from={{ opacity: 0 }} to={{ opacity: 1 }} />
+      <Tween duration={250} from={fromAnime} to={toAnime} reverse="true" />
+      <Tween to={{ opacity: 0 }} />
     </Timeline>
 
     // <Scene duration={time} pin>

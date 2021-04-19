@@ -233,7 +233,6 @@ a {
 
 .content-wrap {
   padding: 1em;
-  max-width: 450px;
   z-index: 1;
 
 }
@@ -257,11 +256,11 @@ a {
 }
 
 .indicator-right .pointer-wrap {
-  right: -100px;
+
 }
 
 .indicator-left .pointer-wrap {
-  left: -100px;
+
 }
 
 .indicator-right .dot {
@@ -349,14 +348,36 @@ font-size: 20px;
   opacity: 0;
 }
 
-.check {
+.indicatorWrap {
   position: absolute;
-  top: 18%;
+  top: 150px;
   transition: all ease .5s;
+  width: 94%;
+  box-sizing: border-box;
+  background: var(--white);
 }
 
 @media (min-width: 768px) {
   .Skylight, .u24, .Limelight {width: 50%;}
+  .ind_one, .ind_two, .ind_3, .ind_four, .ind_five {
+    
+  }
+  .ind_one {
+    top:200px;
+  } 
+  .ind_two {
+    margin-top: 20.5em;
+  } 
+  .ind_3 {
+
+  }
+  .ind_four {
+
+  }
+  .ind_five {
+
+  }
+  .content-wrap h3, .content-wrap p {max-width: 450px;}
 }
 
 @-webkit-keyframes fadeIn {

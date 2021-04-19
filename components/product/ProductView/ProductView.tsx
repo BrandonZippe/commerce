@@ -113,7 +113,7 @@ const ProductView: FC<Props> = ({ product }) => {
 
       <div className="sequence-wrap relative py-40">
         <Controller>
-          <Scene duration="4000" triggerHook={-0.5} pin>
+          <Scene duration="6000" triggerHook={-0.5} pin>
             {(progress: any) => (
               <div
                 style={{
@@ -122,51 +122,123 @@ const ProductView: FC<Props> = ({ product }) => {
                   paddingTop: '10em',
                 }}
               >
-                <Sequence ref={ref} progress={progress} {...progress} />
+                <Sequence
+                  ref={ref}
+                  delay={500}
+                  progress={progress}
+                  {...progress}
+                />
               </div>
             )}
           </Scene>
 
-          <Scene triggerHook={-0.9} duration={4000} pin>
+          <Scene triggerHook={-0.9} duration={6000} pin>
             {(progress: number | undefined) => (
-              <div className="absolute top-10 py-20">
+              <div className="absolute w-full top-10 py-20">
                 <Timeline
                   totalProgress={progress}
                   {...progress}
-                  delay={400}
+                  delay={-400}
                   paused
                 >
                   <ProductSection
-                    className="check indicator-right bottom"
-                    headline={content?.header_check}
-                    copy={content?.product_check}
-                  />
-
-                  <ProductSection
-                    className="gain indicator-left bottom"
+                    className="ind_two indicator-left bottom justify-end text-right"
                     headline={content?.header_gain}
                     copy={content?.product_gain}
+                    fromAnime={{
+                      css: {
+                        right: '0',
+                        width: '40%',
+                        opacity: 0,
+                      },
+                      ease: 'Strong.easeOut',
+                    }}
+                    toAnime={{
+                      css: {
+                        width: '48%',
+                        opacity: 1,
+                      },
+                      ease: 'Strong.easeOut',
+                    }}
                   />
 
                   <ProductSection
-                    className="pop indicator-left bottom"
+                    className="ind_one indicator-right bottom justify-start"
+                    headline={content?.header_check}
+                    copy={content?.product_check}
+                    fromAnime={{
+                      css: {
+                        left: '0px',
+                        width: '40%',
+                        opacity: 0,
+                      },
+                      ease: 'Strong.easeOut',
+                    }}
+                    toAnime={{
+                      css: {
+                        left: '0px',
+                        width: '50%',
+                        opacity: 1,
+                      },
+                      ease: 'Strong.easeOut',
+                    }}
+                  />
+
+                  <ProductSection
+                    className="ind_three indicator-left bottom justify-start"
                     headline={content?.header_pop}
                     copy={content?.product_pop}
-                    time={200}
+                    toAnime={{
+                      css: {
+                        width: '50%',
+                        opacity: 1,
+                      },
+                      ease: 'Strong.easeOut',
+                    }}
+                    fromAnime={{
+                      css: {
+                        opacity: 0,
+                      },
+                      ease: 'Strong.easeOut',
+                    }}
                   />
 
                   <ProductSection
-                    className="location indicator-right bottom"
+                    className="ind_four indicator-right bottom justify-end text-right"
                     headline={content?.header_location}
                     copy={content?.product_location}
-                    time={200}
+                    toAnime={{
+                      css: {
+                        width: '50%',
+                        opacity: 1,
+                      },
+                      ease: 'Strong.easeOut',
+                    }}
+                    fromAnime={{
+                      css: {
+                        opacity: 0,
+                      },
+                      ease: 'Strong.easeOut',
+                    }}
                   />
 
                   <ProductSection
-                    className="tip indicator-left bottom"
+                    className="ind_five indicator-left bottomjustify-start"
                     headline={content?.header_pro_tip}
                     copy={content?.pro_tip}
-                    time={200}
+                    toAnime={{
+                      css: {
+                        width: '50%',
+                        opacity: 1,
+                      },
+                      ease: 'Strong.easeOut',
+                    }}
+                    fromAnime={{
+                      css: {
+                        opacity: 0,
+                      },
+                      ease: 'Strong.easeOut',
+                    }}
                   />
                 </Timeline>
               </div>
